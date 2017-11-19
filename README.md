@@ -3,6 +3,8 @@
 
 # pr-label [![build status][build badge]][build url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/sotayamashita/pr-label.svg)](https://greenkeeper.io/)
+
 ## Development
 
 1. Registering a GitHub App
