@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 # https://github.com/zeit/now-cli/issues/817
