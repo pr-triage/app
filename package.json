@@ -52,7 +52,7 @@
     }
   },
   "now": {
-    "alias": "wip-bot",
+    "alias": "pr-label",
     "env": {
       "APP_ID": "@pr-label-app-id",
       "NODE_ENV": "production",
