@@ -1,7 +1,7 @@
 {
   "name": "pr-label",
   "version": "0.0.0-development",
-  "description": "",
+  "description": "Check pull request status",
   "main": "index.js",
   "scripts": {
     "deploy": "scripts/deploy.sh",
