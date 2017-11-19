@@ -3,7 +3,7 @@
 [greenkeeper badge]:  https://badges.greenkeeper.io/sotayamashita/pr-label.svg
 [greenkeeper url]:    https://greenkeeper.io/
 
-# pr-label [![build status][build badge]][build url] [![greenkeeper status][greenkeeper badge][greenkeeper url]
+# pr-label [![build status][build badge]][build url] [![greenkeeper status][greenkeeper badge]][greenkeeper url]
 
 ## Development
 
