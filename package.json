@@ -15,6 +15,9 @@
     "commitmsg": "validate-commit-msg",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sotayamashita/pr-label.git"
