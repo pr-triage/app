@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "deploy": "scripts/deploy.sh",
-    "start": "probot run ./index.js",
-    "now-start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) DEBUG=probot* npm start",
+    "start-probot": "probot run ./index.js",
+    "start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) DEBUG=probot* npm run start-probot",
     "commit": "git-cz",
     "test": "npm run posttest",
     "posttest": "standard",
