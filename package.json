@@ -58,7 +58,6 @@
       "APP_ID": "@pr-label-app-id",
       "NODE_ENV": "production",
       "PRIVATE_KEY": "@pr-label-private-key",
-      "WEBHOOK_SECRET": "@pr-label-webhook-secret",
       "NPM_TOKEN": "@pr-label-npm-token"
     }
   }
