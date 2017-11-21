@@ -22,9 +22,9 @@ Please remove this notice if you're confident your issue isn't a duplicate.
 
 (How one can reproduce the issue - this is very important)
 
-### Repository URL
+### Pull Request URL
 
-(If possible, please paste repository URLs which have errors.)
+(If possible, please paste pull request URLs which have errors.)
 
 ### What is the current *bug* behavior?
 
