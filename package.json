@@ -7,8 +7,12 @@
     "start-probot": "probot run ./index.js",
     "start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) DEBUG=probot* npm run start-probot",
     "commit": "git-cz",
-    "test": "npm run posttest",
-    "posttest": "standard",
+    "test": "mocha",
+    "lint": "standard",
+    "lint-fix": "standard --fix",
+    "posttest": "npm run lint",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
+    "postcoverage": "codecov",
     "precommit": "npm test",
     "prepush": "npm test",
     "commitmsg": "validate-commit-msg",
@@ -38,12 +42,18 @@
     "probot": "^3.0.2"
   },
   "devDependencies": {
+    "codecov": "^3.0.0",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
+    "expect": "^21.2.1",
     "husky": "^0.14.3",
+    "istanbul": "^0.4.5",
     "localtunnel": "^1.8.3",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
     "semantic-release": "^8.2.3",
     "standard": "^10.0.3",
+    "tap": "^10.7.3",
     "validate-commit-msg": "^2.14.0"
   },
   "config": {
