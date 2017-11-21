@@ -5,6 +5,7 @@ cache:
 notifications:
   email: false
 node_js:
+  - '9'
   - '8'
 before_install:
   - npm install -g npm@5
@@ -19,9 +20,3 @@ after_success:
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
-deploy:
-  script: scripts/deploy.sh
-  provider: script
-  skip_cleanup: true
-  on:
-    branch: master
