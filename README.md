@@ -1,9 +1,11 @@
 [build badge]: https://travis-ci.org/sotayamashita/pr-label.svg?branch=master
 [build url]:   https://travis-ci.org/sotayamashita/pr-label
+[codecov badge]: https://codecov.io/gh/sotayamashita/pr-label/branch/master/graph/badge.svg
+[codecov url]:   https://codecov.io/gh/sotayamashita/pr-label
 [greenkeeper badge]: https://badges.greenkeeper.io/sotayamashita/pr-label.svg
 [greenkeeper url]:   https://greenkeeper.io/
 
-# pr-label [![build status][build badge]][build url] [![greenkeeper status][greenkeeper badge]][greenkeeper url]
+# pr-label [![build status][build badge]][build url] [![codecov statue][codecov badge]][codecov url] [![greenkeeper status][greenkeeper badge]][greenkeeper url]
 
 ## Development
 
