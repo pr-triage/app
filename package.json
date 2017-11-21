@@ -4,7 +4,6 @@
   "description": "Check pull request status",
   "main": "index.js",
   "scripts": {
-    "deploy": "scripts/deploy.sh",
     "start-probot": "probot run ./index.js",
     "start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) DEBUG=probot* npm run start-probot",
     "commit": "git-cz",
@@ -50,15 +49,6 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "now": {
-    "alias": "pr-label",
-    "env": {
-      "APP_ID": "@pr-label-app-id",
-      "NODE_ENV": "production",
-      "PRIVATE_KEY": "@pr-label-private-key",
-      "NPM_TOKEN": "@pr-label-npm-token"
     }
   }
 }
