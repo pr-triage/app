@@ -2,7 +2,6 @@ language: node_js
 
 cache:
   directories:
-    # https://twitter.com/maybekatz/status/905213355748720640
     - ~/.npm
 
 notifications:
@@ -25,8 +24,9 @@ after_script:
 after_success:
   - npm run semantic-release
 
-# Trigger a push build on master and greenkeeper branches + PRs build on every branches
-# Avoid double build on PRs (See https://github.com/travis-ci/travis-ci/issues/1147)
+deploy:
+  glitch-deploy
+
 branches:
   only:
     - master

@@ -7,6 +7,8 @@
     "start-probot": "probot run ./index.js",
     "start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) DEBUG=probot* npm run start-probot",
     "commit": "git-cz",
+    "lint": "standard",
+    "lint-fix": "standard --fix",
     "test": "npm run posttest",
     "posttest": "standard",
     "precommit": "npm test",
@@ -40,6 +42,7 @@
   "devDependencies": {
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
+    "glitch-deploy-cli": "^1.0.0",
     "husky": "^0.14.3",
     "localtunnel": "^1.8.3",
     "semantic-release": "^8.2.3",
