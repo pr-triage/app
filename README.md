@@ -5,6 +5,14 @@
 
 # pr-label [![build status][build badge]][build url] [![greenkeeper status][greenkeeper badge]][greenkeeper url]
 
+<p>
+  <a href="https://www.patreon.com/bePatron?u=6995574" target="_blank">
+    <img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" height="40px" />
+  </a>
+</p>
+
+> Add a label automatically to know PR status at first glance.
+
 ## Development
 
 1. Registering a GitHub App

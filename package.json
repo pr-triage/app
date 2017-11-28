@@ -1,7 +1,7 @@
 {
   "name": "pr-label",
   "version": "0.0.0-development",
-  "description": "Check pull request status",
+  "description": "Add a label automatically to know PR status at first glance.",
   "main": "index.js",
   "scripts": {
     "start-probot": "probot run ./index.js",
