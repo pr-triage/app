@@ -23,9 +23,7 @@ after_script:
 
 after_success:
   - npm run semantic-release
-
-deploy:
-  glitch-deploy
+  - glitch-deploy
 
 branches:
   only:
