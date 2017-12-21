@@ -45,7 +45,7 @@
     "glitch-deploy-cli": "^2.0.0",
     "husky": "^0.14.3",
     "localtunnel": "^1.8.3",
-    "semantic-release": "^8.2.3",
+    "semantic-release": "^11.0.2",
     "standard": "^10.0.3",
     "validate-commit-msg": "^2.14.0"
   },
