@@ -1,5 +1,5 @@
 {
-  "name": "pr-label",
+  "name": "labeling-droid",
   "version": "0.0.0-development",
   "description": "Add a label automatically to know PR status at first glance.",
   "main": "index.js",
@@ -21,20 +21,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sotayamashita/pr-label.git"
+    "url": "https://github.com/sotayamashita/labeling-droid.git"
   },
   "keywords": [
     "probot",
     "GitHub App",
     "pull request",
-    "label"
+    "label",
+    "marge request"
   ],
   "author": "Sam Yamashita",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sotayamashita/pr-label/issues"
+    "url": "https://github.com/sotayamashita/labeling-droid/issues"
   },
-  "homepage": "https://github.com/sotayamashita/pr-label#readme",
+  "homepage": "https://github.com/sotayamashita/labeling-droid#readme",
   "dependencies": {
     "debug": "^3.1.0",
     "probot": "^3.0.3"
@@ -42,11 +43,11 @@
   "devDependencies": {
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
-    "glitch-deploy-cli": "^2.0.0",
     "husky": "^0.14.3",
     "localtunnel": "^1.8.3",
     "semantic-release": "^8.2.3",
     "standard": "^10.0.3",
+    "sync-glitch-cli": "^2.0.0",
     "validate-commit-msg": "^2.14.0"
   },
   "config": {

@@ -1,14 +1,14 @@
 !!PLEASE READ IT!!
 
-To make it easier for us to treat your feedback, 
+To make it easier for us to treat your feedback,
 we have made a template you can fill out.
 
 Before opening a new issue, make sure to search for keywords in the issues
 filtered by the "bug" label.
 
-- https://github.com/sotayamashita/pr-label/labels/bug
+- https://github.com/sotayamashita/labeling-droid/labels/bug
 
-and verify the issue you're about to submit isn't a duplicate. 
+and verify the issue you're about to submit isn't a duplicate.
 Please make separate posts for each feature request or bug report.
 Please remove this notice if you're confident your issue isn't a duplicate.
 ------
@@ -45,5 +45,5 @@ logs, and code as it's very hard to read otherwise.)
 
 
 <!--
-   We appreciate you giving us your feedback. 
+   We appreciate you giving us your feedback.
 -->
