@@ -45,7 +45,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
     "localtunnel": "^1.8.3",
-    "semantic-release": "^8.2.3",
+    "semantic-release": "^11.0.2",
     "standard": "^10.0.3",
     "sync-glitch-cli": "^2.0.0",
     "validate-commit-msg": "^2.14.0"
