@@ -1,9 +1,11 @@
+[npm badge]: https://badge.fury.io/js/labeling-droid.svg
+[npm url]:   https://badge.fury.io/js/labeling-droid
 [build badge]: https://travis-ci.org/sotayamashita/labeling-droid.svg?branch=master
 [build url]:   https://travis-ci.org/sotayamashita/labeling-droid
 [greenkeeper badge]: https://badges.greenkeeper.io/sotayamashita/labeling-droid.svg
 [greenkeeper url]:   https://greenkeeper.io/
 
-# labeling-droid [![build status][build badge]][build url] [![greenkeeper status][greenkeeper badge]][greenkeeper url]
+# labeling-droid [![npm][npm badge]][npm url] [![build status][build badge]][build url] [![greenkeeper status][greenkeeper badge]][greenkeeper url]
 
 <p>
   <a href="https://www.patreon.com/bePatron?u=6995574" target="_blank">
