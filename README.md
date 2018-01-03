@@ -13,21 +13,19 @@
 
 > Add a label automatically to know PR status at first glance.
 
-## License
+In team development, pull request are getting increasing. In this situation, it is very hard to know **Is it work in progress?**, **Is it unreviewed?**, **Is it requested to change** or **Is it ready to ship?** at first glance. That way I created it. It will help you know PR status at first sight by adding label.
 
-MIT
+## How to activate the droid on your repository
 
-<!-- ## Development
+1. Go to [Labeling Droid GitHub App Page](https://github.com/apps/labeling-droid)
+1. Choose user or organization to install.
+1. Input your repository name.
 
-1. Registering a GitHub App
-2. `echo "APP_ID=<Your GitHub App ID>" >> .env`
-3. Download your GitHub App Private key from setting page of it
-4. Happy hacking with [Simulating Webhooks](https://probot.github.io/docs/simulating-webhooks/):
+## How does it works on your repository
 
-   ```
-   # E.g)
-   node_modules/.bin/probot simulate pull_request test/fixtures/pull_request.opened.json ./index.js
+It will add each label to know each question below:
 
-   # E.g)
-   node_modules/.bin/probot simulate review_pull_request test/fixtures/pull_request_review.submitted.approved.json ./index.js
-   ``` -->
+- _"Is it work in progress?"_ - `N/A`
+- _"Is it unreviewed?"_ - `PR: unreviewed`
+- _"Is it requested to change?"_ - `PR: reviewed-changes-requested`
+- _"Is it ready to ship?"_ - `PR: reviewed-approved`
