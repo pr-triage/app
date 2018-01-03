@@ -1,7 +1,7 @@
 {
   "name": "labeling-droid",
   "version": "0.0.0-development",
-  "description": "Add a label automatically to know PR status at first glance.",
+  "description": "GitHub App built with Probot that add a label automatically to know PR status at first glance.",
   "main": "index.js",
   "scripts": {
     "start-probot": "probot run ./index.js",

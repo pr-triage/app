@@ -13,9 +13,9 @@
   </a>
 </p>
 
-> Add a label automatically to know PR status at first glance.
+> GitHub App built with [Probot](https://github.com/probot/probot) that add a label automatically to know PR status at first glance.
 
-In team development, pull request are getting increasing. In this situation, it is very hard to know **Is it work in progress?**, **Is it unreviewed?**, **Is it requested to change** or **Is it ready to ship?** at first glance. That way I created it. It will help you know PR status at first sight by adding label.
+In team development, pull request are getting increasing. In this situation, it is very hard to know **Is it work in progress?**, **Is it unreviewed?**, **Is it requested to change** or **Is it ready to ship?** at first glance. That way I created it. It will help you know PR status at first sight by adding label. It is deployed with [glitch](https://glitch.com) and its url is [https://labeling-droid.glitch.me/probot](https://labeling-droid.glitch.me/probot).
 
 ## How to activate the droid on your repository
 
