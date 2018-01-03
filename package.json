@@ -25,7 +25,9 @@
   },
   "keywords": [
     "probot",
-    "GitHub App",
+    "probot-app",
+    "probot-plugin",
+    "github-app",
     "pull request",
     "label",
     "marge request"
