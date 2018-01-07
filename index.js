@@ -8,7 +8,7 @@ function probotPlugin (robot) {
     'pull_request.edited',
     'pull_request.synchronize',
     'pull_request.reopened',
-    'review_pull_request.submitted'
+    'pull_request_review.submitted'
   ]
 
   robot.on(events, function (context) {
