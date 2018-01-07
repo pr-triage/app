@@ -14,6 +14,9 @@ before_install:
   - npm install -g npm@5
   - npm install -g greenkeeper-lockfile@1
 
+script:
+ - npm run coverage
+
 before_script:
   - greenkeeper-lockfile-update
   - npm prune
@@ -28,4 +31,4 @@ after_success:
 branches:
   only:
     - master
-    - /^greenkeeper
+    - /^greenkeeper/.*$/
