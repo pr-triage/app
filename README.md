@@ -30,14 +30,18 @@ In team development, pull request are getting increasing. In this situation, it 
 It will add each label to know each question below:
 
 - _"Is it work in progress?"_ - `N/A`
-- _"Is it unreviewed?"_ - `PR: unreviewed`
 
-    ![unreviewed](https://user-images.githubusercontent.com/1587053/34649116-d6f44b7a-f3eb-11e7-80b6-59e26d60c4d4.png)
+- _"Is it unreviewed?"_ - Add `PR: unreviewed` label if there are not reviews.
+  <p>
+    <img src="https://user-images.githubusercontent.com/1587053/34649116-d6f44b7a-f3eb-11e7-80b6-59e26d60c4d4.png" width="600"/>
+  </p>
 
-- _"Is it requested to change?"_ - `PR: reviewed-changes-requested`
+- _"Is it requested to change?"_ - Add `PR: reviewed-changes-requested` label if there is even one change request reviews.
+  <p>
+    <img src="https://user-images.githubusercontent.com/1587053/34649117-d8ca1d80-f3eb-11e7-86e1-db2427f6a5b2.png" width="600"/>
+  </p>
 
-    ![changes-requested](https://user-images.githubusercontent.com/1587053/34649117-d8ca1d80-f3eb-11e7-86e1-db2427f6a5b2.png)
-
-- _"Is it ready to ship?"_ - `PR: reviewed-approved`
-
-    ![approved](https://user-images.githubusercontent.com/1587053/34649118-de294544-f3eb-11e7-89ed-69a45cfa7792.png)
+- _"Is it ready to ship?"_ - Add `PR: reviewed-approved` label if there is **NOT** even one change request reviews.
+  <p>
+    <img src="https://user-images.githubusercontent.com/1587053/34649118-de294544-f3eb-11e7-89ed-69a45cfa7792.png" width="600"/>
+  </p>
