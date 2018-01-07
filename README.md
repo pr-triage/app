@@ -7,6 +7,10 @@
 [greenkeeper badge]: https://badges.greenkeeper.io/sotayamashita/labeling-droid.svg
 [greenkeeper url]:   https://greenkeeper.io/
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/1587053/34650011-e7fb516e-f3fc-11e7-8bbb-51f86568dce3.png" width="120" />
+</p>
+
 # labeling-droid [![npm][npm badge]][npm url] [![build status][build badge]][build url] [![codecov][codecov badge]][codecov url] [![greenkeeper status][greenkeeper badge]][greenkeeper url]
 
 <p>
