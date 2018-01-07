@@ -7,6 +7,7 @@ function probotPlugin (robot) {
     'pull_request.opened',
     'pull_request.edited',
     'pull_request.synchronize',
+    'pull_request.reopened',
     'review_pull_request.submitted'
   ]
 

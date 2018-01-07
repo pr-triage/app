@@ -4,13 +4,14 @@
   "description": "GitHub App built with Probot that add a label automatically to know PR status at first glance.",
   "main": "index.js",
   "scripts": {
-    "start-probot": "probot run ./index.js",
-    "start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) DEBUG=probot* npm run start-probot",
     "commit": "git-cz",
     "lint": "standard",
     "lint-fix": "standard --fix",
-    "test": "npm run posttest",
-    "posttest": "standard",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "posttest": "npm run lint",
+    "coverage": "npm test  -- --coverage",
+    "postcoverage": "codecov",
     "precommit": "npm test",
     "prepush": "npm test",
     "commitmsg": "validate-commit-msg",
@@ -47,6 +48,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
     "localtunnel": "^1.8.3",
+    "nock": "^9.1.5",
     "semantic-release": "^11.0.2",
     "standard": "^10.0.3",
     "sync-glitch-cli": "^2.0.0",
@@ -56,5 +58,25 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "standard": {
+    "ignore": [
+      "test/**"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "lib/**/*.js"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage/",
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "test/fixtures"
+    ],
+    "watchPathIgnorePatterns": [
+      "node_modules",
+      "test/fixtures"
+    ]
   }
 }

@@ -1,0 +1,96 @@
+{
+    "pull_request": {
+        "data": {
+            "title": "Update README.md",
+            "labels": [{
+                "id": 796526741,
+                "url": "https://api.github.com/repos/sotayamashita/labeling-droid/labels/PR:%20reviewed-approved",
+                "name": "PR: reviewed-approved",
+                "color": "0e8a16",
+                "default": false
+            }],
+            "state": "open"
+        }
+    },
+    "pull_request_wip": {
+        "data": {
+            "title": "WIP: Update README.md"
+        }
+    },
+    "reviews_approved": {
+        "data": [
+            {
+                "id": 1,
+                "user": { "id": 1 },
+                "state": "APPROVED",
+                "submitted_at": "2018-01-06T08:28:10Z",
+                "commit_id": "head"
+            }
+        ]
+    },
+    "reviews_changes_requested": {
+        "data": [
+            {
+                "id": 1,
+                "user": { "id": 1 },
+                "state": "CHANGES_REQUESTED",
+                "submitted_at": "2018-01-06T08:28:10Z",
+                "commit_id": "head"
+            }
+        ]
+    },
+    "reviews": {
+        "data": [
+            {
+                "id": 1,
+                "user": { "id": 1 },
+                "state": "CHANGES_REQUESTED",
+                "submitted_at": "2018-01-06T08:28:10Z",
+                "commit_id": "head"
+            },
+            {
+                "id": 2,
+                "user": { "id": 2 },
+                "state": "APPROVED",
+                "submitted_at": "2018-01-06T08:28:10Z",
+                "commit_id": "head"
+            }
+        ]
+    },
+    "reviews_behind": {
+        "data": [
+            {
+                "id": 1,
+                "user": { "id": 1 },
+                "state": "CHANGES_REQUESTED",
+                "submitted_at": "2018-01-06T08:28:10Z",
+                "commit_id": "head"
+            },
+            {
+                "id": 2,
+                "user": { "id": 2 },
+                "state": "APPROVED",
+                "submitted_at": "2018-01-06T08:28:10Z",
+                "commit_id": "behind"
+            }
+        ]
+    },
+    "reviews_duplicated": {
+        "data": [
+            {
+                "id": 1,
+                "user": { "id": 1 },
+                "state": "CHANGES_REQUESTED",
+                "submitted_at": "2018-01-01T00:00:00Z",
+                "commit_id": "head"
+            },
+            {
+                "id": 1,
+                "user": { "id": 1 },
+                "state": "APPROVED",
+                "submitted_at": "2019-01-01T00:00:00Z",
+                "commit_id": "head"
+            }
+        ]
+    }
+}

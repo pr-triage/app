@@ -7,10 +7,10 @@
 
     ```
     # Example: Simulate when user create a pull request
-    node_modules/.bin/probot simulate pull_request test/fixtures/pull_request.opened.json ./index.js
+    node_modules/.bin/probot simulate pull_request test/simulates/pull_request.opened.json ./index.js
 
     # Example: Simulate when user add a review to the pull request
-    node_modules/.bin/probot simulate review_pull_request test/fixtures/pull_request_review.submitted.approved.json ./index.js
+    node_modules/.bin/probot simulate review_pull_request test/simulates/pull_request_review.submitted.approved.json ./index.js
     ```
 1. `git add .`
 1. `npm run commit`
