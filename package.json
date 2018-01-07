@@ -4,6 +4,8 @@
   "description": "GitHub App built with Probot that add a label automatically to know PR status at first glance.",
   "main": "index.js",
   "scripts": {
+    "start-probot": "probot run ./index.js",
+    "start": "PRIVATE_KEY=$(echo $PRIVATE_KEY | base64 -d) DEBUG=probot* npm run start-probot",
     "commit": "git-cz",
     "lint": "standard",
     "lint-fix": "standard --fix",
