@@ -1,5 +1,5 @@
 {
-  "name": "labeling-droid",
+  "name": "sidekick-bot",
   "version": "0.0.0-development",
   "description": "GitHub App built with Probot that support pull request workflow",
   "main": "index.js",
