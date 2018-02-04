@@ -1,4 +1,4 @@
-const debug = require('debug')('probot:labeling-droid')
+const debug = require('debug')('probot:sidekick')
 const handlePullRequestChange = require('./lib/handle-pull-request-change')
 
 function probotPlugin (robot) {

@@ -1,51 +1,18 @@
-[npm badge]: https://badge.fury.io/js/labeling-droid.svg
-[npm url]:   https://badge.fury.io/js/labeling-droid
-[build badge]: https://travis-ci.org/sotayamashita/labeling-droid.svg?branch=master
-[build url]:   https://travis-ci.org/sotayamashita/labeling-droid
-[codecov badge]: https://codecov.io/gh/sotayamashita/labeling-droid/branch/master/graph/badge.svg
-[codecov url]:   https://codecov.io/gh/sotayamashita/labeling-droid
-[greenkeeper badge]: https://badges.greenkeeper.io/sotayamashita/labeling-droid.svg
+[npm badge]: https://badge.fury.io/js/sidekick.svg
+[npm url]:   https://badge.fury.io/js/sidekick
+[build badge]: https://travis-ci.org/sotayamashita/sidekick.svg?branch=master
+[build url]:   https://travis-ci.org/sotayamashita/sidekick
+[codecov badge]: https://codecov.io/gh/sotayamashita/sidekick/branch/master/graph/badge.svg
+[codecov url]:   https://codecov.io/gh/sotayamashita/sidekick
+[greenkeeper badge]: https://badges.greenkeeper.io/sotayamashita/sidekick.svg
 [greenkeeper url]:   https://greenkeeper.io/
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/1587053/34650011-e7fb516e-f3fc-11e7-8bbb-51f86568dce3.png" width="120" />
-</p>
-
-# labeling-droid [![npm][npm badge]][npm url] [![build status][build badge]][build url] [![codecov][codecov badge]][codecov url] [![greenkeeper status][greenkeeper badge]][greenkeeper url]
+# sidekick [![npm][npm badge]][npm url] [![build status][build badge]][build url] [![codecov][codecov badge]][codecov url] [![greenkeeper status][greenkeeper badge]][greenkeeper url]
 
 <p>
-  <a href="https://www.patreon.com/bePatron?u=6995574" target="_blank">
-    <img src="https://c5.patreon.com/external/logo/become_a_patron_button.png" height="40px" />
+  <a href="https://www.buymeacoffee.com/pM9aX60">
+    <img src="https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg" height="41px" />
   </a>
 </p>
 
-> GitHub App built with [Probot](https://github.com/probot/probot) that add a label automatically to know PR status at first glance.
-
-In team development, pull request are getting increasing. In this situation, it is very hard to know **Is it work in progress?**, **Is it unreviewed?**, **Is it requested to change** or **Is it ready to ship?** at first glance. That way I created it. It will help you know PR status at first sight by adding label. It is deployed with [glitch](https://glitch.com) and its url is [https://labeling-droid.glitch.me/probot](https://labeling-droid.glitch.me/probot).
-
-## How to activate the droid on your repository
-
-1. Go to [Labeling Droid GitHub App Page](https://github.com/apps/labeling-droid)
-1. Choose user or organization to install.
-1. Input your repository name.
-
-## How does it works on your repository
-
-It will add each label to know each question below:
-
-- _"Is it work in progress?"_ - `N/A`
-
-- _"Is it unreviewed?"_ - Add `PR: unreviewed` label if there are not reviews.
-  <p>
-    <img src="https://user-images.githubusercontent.com/1587053/34649116-d6f44b7a-f3eb-11e7-80b6-59e26d60c4d4.png" width="600"/>
-  </p>
-
-- _"Is it requested to change?"_ - Add `PR: reviewed-changes-requested` label if there is even one change request reviews.
-  <p>
-    <img src="https://user-images.githubusercontent.com/1587053/34649117-d8ca1d80-f3eb-11e7-86e1-db2427f6a5b2.png" width="600"/>
-  </p>
-
-- _"Is it ready to ship?"_ - Add `PR: reviewed-approved` label if there is **NOT** even one change request reviews.
-  <p>
-    <img src="https://user-images.githubusercontent.com/1587053/34649118-de294544-f3eb-11e7-89ed-69a45cfa7792.png" width="600"/>
-  </p>
+> GitHub App built with [Probot](https://github.com/probot/probot) that support pull request workflow

@@ -1,7 +1,7 @@
 {
   "name": "labeling-droid",
   "version": "0.0.0-development",
-  "description": "GitHub App built with Probot that add a label automatically to know PR status at first glance.",
+  "description": "GitHub App built with Probot that support pull request workflow",
   "main": "index.js",
   "scripts": {
     "start": "DEBUG=probot* probot run ./index.js",
@@ -9,11 +9,9 @@
     "lint": "standard",
     "lint-fix": "standard --fix",
     "test": "jest",
-    "test-watch": "jest --watch",
-    "posttest": "npm run lint",
     "coverage": "npm test  -- --coverage",
     "postcoverage": "codecov",
-    "precommit": "npm test",
+    "precommit": "npm test && lint-staged",
     "prepush": "npm test",
     "commitmsg": "validate-commit-msg",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -50,8 +48,9 @@
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
     "jest": "^22.0.4",
-    "localtunnel": "^1.8.3",
+    "lint-staged": "^6.1.0",
     "semantic-release": "^12.2.2",
+    "smee-client": "^1.0.1",
     "standard": "^10.0.3",
     "sync-glitch-cli": "^2.0.0",
     "validate-commit-msg": "^2.14.0"
@@ -60,6 +59,12 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "lib/**/*.js": [
+      "standard --fix",
+      "git add"
+    ]
   },
   "standard": {
     "ignore": [
