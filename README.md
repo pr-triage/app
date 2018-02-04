@@ -1,5 +1,5 @@
-[npm badge]: https://badge.fury.io/js/sidekick.svg
-[npm url]:   https://badge.fury.io/js/sidekick
+[npm badge]: https://badge.fury.io/js/sidekick-bot.svg
+[npm url]:   https://badge.fury.io/js/sidekick-bot
 [build badge]: https://travis-ci.org/sotayamashita/sidekick.svg?branch=master
 [build url]:   https://travis-ci.org/sotayamashita/sidekick
 [codecov badge]: https://codecov.io/gh/sotayamashita/sidekick/branch/master/graph/badge.svg
