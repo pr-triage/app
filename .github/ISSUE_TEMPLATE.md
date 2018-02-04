@@ -6,7 +6,7 @@ we have made a template you can fill out.
 Before opening a new issue, make sure to search for keywords in the issues
 filtered by the "bug" label.
 
-- https://github.com/sotayamashita/labeling-droid/labels/bug
+- https://github.com/sotayamashita/sidekick/labels/bug
 
 and verify the issue you're about to submit isn't a duplicate.
 Please make separate posts for each feature request or bug report.
