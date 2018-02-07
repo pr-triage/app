@@ -20,5 +20,5 @@
 ## Features
 
 <p>
-  <img src="https://user-images.githubusercontent.com/1587053/35916739-c8771700-0c4e-11e8-8e94-f488b133a3dd.png" width="100%">
+  <img src="https://user-images.githubusercontent.com/1587053/35917561-f4928e02-0c51-11e8-95d3-81b4f44ed6d2.png" width="100%">
 </p>
