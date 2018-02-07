@@ -16,3 +16,9 @@
 </p>
 
 > GitHub App built with [Probot](https://github.com/probot/probot) that support pull request workflow
+
+## Features
+
+<p>
+  <img src="https://user-images.githubusercontent.com/1587053/35916739-c8771700-0c4e-11e8-8e94-f488b133a3dd.png" width="100%">
+</p>
