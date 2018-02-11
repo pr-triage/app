@@ -30,7 +30,20 @@
 
 ## How to install it into your repository
 
-_**Heads-up!** It built with [GitHub App](https://developer.github.com/apps/building-github-apps/) and it does NOT have any permission to ready your code :see_no_evil: Please do not worry about it. If you have any question please ask via [creating a issue](https://github.com/sotayamashita/sidekick/issues/new?labels=question)._
+_**Heads-up!** It does NOT have any permission to ready your code :see_no_evil: Please do not worry about it. If you have any question please ask via [creating a issue](https://github.com/sotayamashita/sidekick/issues/new?labels=question)._
 
 1. Go to [Sidekick Page](https://github.com/apps/sidekick) and click **Install**
 2. Please choose a repository you want to use it :smile:
+
+## Load map
+
+- Improve test (ensure 100% coverage)
+  - [ ] Exposing lines which has not been tested yet
+  - [ ] Create a tasks
+- Customize name and color of PR
+  - [ ] Load configuration file from `.github/sidekick.yml`
+- Implement complicated triage workflow and make them pluggable
+  - [ ] Angular JS _ref: [Automate PR workflow via github robot](https://github.com/angular/angular/issues/21884)_
+  - [ ] Webpack _ref: [webpack/open-bot.yaml](https://github.com/webpack/webpack/blob/master/open-bot.yaml)_
+
+
