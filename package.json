@@ -49,7 +49,7 @@
     "husky": "^0.14.3",
     "jest": "^22.0.4",
     "lint-staged": "^6.1.0",
-    "semantic-release": "^12.2.2",
+    "semantic-release": "^15.0.0",
     "smee-client": "^1.0.1",
     "standard": "^11.0.0",
     "sync-glitch-cli": "^2.0.0",
