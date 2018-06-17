@@ -13,7 +13,8 @@
     "precommit": "npm test && lint-staged",
     "prepush": "npm test",
     "commitmsg": "validate-commit-msg",
-    "semantic-release": "semantic-release pre && semantic-release post"
+    "travis-deploy-once": "travis-deploy-once --pro",
+    "semantic-release": "semantic-release"
   },
   "engines": {
     "node": "8.x"
@@ -45,8 +46,10 @@
     "jest": "^22.4.4",
     "lint-staged": "^6.1.1",
     "prettier": "1.13.4",
+    "semantic-release": "^15.5.4",
     "smee-client": "^1.0.1",
     "sync-glitch-cli": "^2.0.0",
+    "travis-deploy-once": "^5.0.0",
     "validate-commit-msg": "^2.14.0"
   },
   "config": {
