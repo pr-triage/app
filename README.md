@@ -28,7 +28,7 @@ PRTriage does **"NOT"** have permission to `Read & Write` your code :see_no_evil
 ## How it works
 
 <p>
-  <img src="https://user-images.githubusercontent.com/1587053/35917561-f4928e02-0c51-11e8-95d3-81b4f44ed6d2.png" width="100%">
+  <img src="https://raw.githubusercontent.com/pr-triage/pr-triage/master/public/assets/flow.png" width="100%">
 </p>
 
 - Do nothing if your title of PR starts from `WIP`, `[WIP]` or `WIP:`.
