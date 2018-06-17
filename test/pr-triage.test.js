@@ -19,7 +19,7 @@ describe("PRTriage", () => {
    */
   describe("GH REVIEW STATE", () => {
     expect(PRTriage.GH_REVIEW_STATE).toEqual({
-      APPROVE: "APPROVE",
+      APPROVED: "APPROVED",
       CHANGES_REQUESTED: "CHANGES_REQUESTED",
       COMMENT: "COMMENT"
     });
@@ -98,7 +98,7 @@ describe("PRTriage", () => {
         klass.pullRequest =
           payload["pull_request"]["with"]["unreviewed_label"]["data"];
         const result = await subject();
-        expect(result).toEqual(PRTriage.STATE.APPROVE);
+        expect(result).toEqual(PRTriage.STATE.APPROVED);
       });
     });
   }); // _getState
