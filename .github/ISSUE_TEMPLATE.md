@@ -1,18 +1,15 @@
-!!PLEASE READ IT!!
-
-To make it easier for us to treat your feedback,
-we have made a template you can fill out.
+<!---
+Please read this!
 
 Before opening a new issue, make sure to search for keywords in the issues
 filtered by the "bug" label.
 
-- https://github.com/sotayamashita/sidekick/labels/bug
+For issue tracker:
+
+- https://github.com/pr-triage/pr-triage/labels/bug
 
 and verify the issue you're about to submit isn't a duplicate.
-Please make separate posts for each feature request or bug report.
-Please remove this notice if you're confident your issue isn't a duplicate.
-------
-
+--->
 
 ### Summary
 
@@ -44,6 +41,4 @@ logs, and code as it's very hard to read otherwise.)
 (If you have any idea to solve the problem, please help us.)
 
 
-<!--
-   We appreciate you giving us your feedback.
--->
+<!-- We appreciate you giving us your feedback. -->
