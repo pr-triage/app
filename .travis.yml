@@ -8,9 +8,9 @@ notifications:
   email: false
 
 node_js:
-  - '8'
-  - '9'
   - '10'
+  - '9'
+  - '8'
 
 before_install:
   - npm install -g npm@5
@@ -27,8 +27,7 @@ after_script:
   - greenkeeper-lockfile-upload
 
 after_success:
-  - npm run semantic-release
-  - sync-glitch
+  - npx travis-deploy-once "npx semantic-release && npx sync-glitch"
 
 branches:
   only:
