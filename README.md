@@ -10,7 +10,10 @@
 [codacy badge]: https://api.codacy.com/project/badge/Grade/9bb804751e0f4309b7b72f2183e8cdc8
 [codacy url]:   https://www.codacy.com/app/pr-triage/pr-triage?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pr-triage/pr-triage&amp;utm_campaign=Badge_Grade
 
-# PRTriage [![build status][build badge]][build url] [![codecov][codecov badge]][codecov url] [![codacy status][codacy badge]][codacy url] [![greenkeeper status][greenkeeper badge]][greenkeeper url]
+[vulnerabilities badge]: https://snyk.io/test/github/pr-triage/pr-triage/badge.svg?targetFile=package.json
+[vulnerabilities url]:   https://snyk.io/test/github/pr-triage/pr-triage?targetFile=package.json
+
+# PRTriage [![build status][build badge]][build url] [![codecov][codecov badge]][codecov url] [![codacy status][codacy badge]][codacy url] [![greenkeeper status][greenkeeper badge]][greenkeeper url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
 
 > GitHub App built with [Probot](https://github.com/probot/probot) that support pull request workflow
 
@@ -28,7 +31,7 @@ PRTriage does **"NOT"** have permission to `Read & Write` your code :see_no_evil
 ## How it works
 
 <p>
-  <img src="https://raw.githubusercontent.com/pr-triage/pr-triage/master/public/assets/flow.png" width="100%">
+  <img src="https://user-images.githubusercontent.com/1587053/35917561-f4928e02-0c51-11e8-95d3-81b4f44ed6d2.png" width="100%">
 </p>
 
 - Do nothing if your title of PR starts from `WIP`, `[WIP]` or `WIP:`.
