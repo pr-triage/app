@@ -17,7 +17,7 @@
 
 ## Install
 
-PRTriage does **"NOT"** have permission to `Read & Write` your code :see_no_evil:. For more details, see [Permission and Subscribe section](#permission-&-subscribe-event). If you have any question, please free to ask us via [creating an issue](https://github.com/pr-triage/pr-triage/issues/new?labels=question).
+PRTriage does **"NOT"** have permission to `Read & Write` your code :see_no_evil:. For more details, see [Permission and Subscribe section](#permission--subscribe-event). If you have any question, please free to ask us via [creating an issue](https://github.com/pr-triage/pr-triage/issues/new?labels=question).
 
 1. :runner: Go to [PRTriage App Page](https://github.com/apps/pr-triage)
 1. :rocket: Click **Install**

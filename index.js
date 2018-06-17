@@ -26,8 +26,12 @@ async function triage(context) {
 
 function forRepository(context) {
   // Extract pull request object depends on context
-  const pullRequest = context.payload.pull_request || context.payload.review.pull_request;
-  const config = Object.assign({}, context.issue({ sha: pullRequest.head.sha }));
+  const pullRequest =
+    context.payload.pull_request || context.payload.review.pull_request;
+  const config = Object.assign(
+    {},
+    context.issue({ sha: pullRequest.head.sha })
+  );
 
   return new PRTriage(context.github, config);
 }

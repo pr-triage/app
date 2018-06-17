@@ -34,7 +34,8 @@ describe("PRTriage", () => {
       const subject = () => klass._getState();
 
       test("should be STATE.WIP", async () => {
-        klass.pullRequest = payload["pull_request"]["with"]["wip_title"]["data"];
+        klass.pullRequest =
+          payload["pull_request"]["with"]["wip_title"]["data"];
         const result = await subject();
         expect(result).toEqual(PRTriage.STATE.WIP);
       });
@@ -50,7 +51,8 @@ describe("PRTriage", () => {
       const subject = () => klass._getState();
 
       test("should be STATE.UNREVIED", async () => {
-        klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
         const result = await subject();
         expect(result).toEqual(PRTriage.STATE.UNREVIED);
       });
@@ -59,14 +61,21 @@ describe("PRTriage", () => {
     describe("when number of CHANGES_REQUESTED is more than 0", () => {
       const github = {
         pullRequests: {
-          getReviews: jest.fn().mockReturnValue(Promise.resolve(payload["reviews"]["should_be"]["chnages_requested"]))
+          getReviews: jest
+            .fn()
+            .mockReturnValue(
+              Promise.resolve(
+                payload["reviews"]["should_be"]["chnages_requested"]
+              )
+            )
         }
       };
       const klass = new PRTriage(github, { sha: "head" });
       const subject = () => klass._getState();
 
       test("should be STATE.CHANGES_REQUESTED", async () => {
-        klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
         const result = await subject();
         expect(result).toEqual(PRTriage.STATE.CHANGES_REQUESTED);
       });
@@ -75,14 +84,19 @@ describe("PRTriage", () => {
     describe("when number of reviews and approved reviews are same", () => {
       const github = {
         pullRequests: {
-          getReviews: jest.fn().mockReturnValue(Promise.resolve(payload["reviews"]["should_be"]["approve"]))
+          getReviews: jest
+            .fn()
+            .mockReturnValue(
+              Promise.resolve(payload["reviews"]["should_be"]["approve"])
+            )
         }
       };
       const klass = new PRTriage(github, { sha: "head" });
       const subject = () => klass._getState();
 
       test("should be STATE.APPROVE", async () => {
-        klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
         const result = await subject();
         expect(result).toEqual(PRTriage.STATE.APPROVE);
       });
@@ -97,7 +111,11 @@ describe("PRTriage", () => {
       describe("and filtered by sha", () => {
         const github = {
           pullRequests: {
-            getReviews: jest.fn().mockReturnValue(Promise.resolve(payload["reviews"]["filtered_by"]["sha"]))
+            getReviews: jest
+              .fn()
+              .mockReturnValue(
+                Promise.resolve(payload["reviews"]["filtered_by"]["sha"])
+              )
           }
         };
         const klass = new PRTriage(github, { sha: "head" });
@@ -116,12 +134,18 @@ describe("PRTriage", () => {
       describe("and filtered by state", () => {
         const github = {
           pullRequests: {
-            getReviews: jest.fn().mockReturnValue(Promise.resolve(payload["reviews"]["filtered_by"]["state"]))
+            getReviews: jest
+              .fn()
+              .mockReturnValue(
+                Promise.resolve(payload["reviews"]["filtered_by"]["state"])
+              )
           }
         };
         const klass = new PRTriage(github, { sha: "head" });
         const subject = () => klass._getUniqueReviews();
-        const desiredObj = [{ state: "APPROVED", submitted_at: "2018-01-06T08:28:10Z" }];
+        const desiredObj = [
+          { state: "APPROVED", submitted_at: "2018-01-06T08:28:10Z" }
+        ];
 
         test("should be latest commit", async () => {
           const result = await subject();
@@ -132,12 +156,18 @@ describe("PRTriage", () => {
       describe("and filtered by date", () => {
         const github = {
           pullRequests: {
-            getReviews: jest.fn().mockReturnValue(Promise.resolve(payload["reviews"]["filtered_by"]["date"]))
+            getReviews: jest
+              .fn()
+              .mockReturnValue(
+                Promise.resolve(payload["reviews"]["filtered_by"]["date"])
+              )
           }
         };
         const klass = new PRTriage(github, { sha: "head" });
         const subject = () => klass._getUniqueReviews();
-        const desiredObj = [{ state: "APPROVED", submitted_at: "2020-07-24T00:00:00Z" }];
+        const desiredObj = [
+          { state: "APPROVED", submitted_at: "2020-07-24T00:00:00Z" }
+        ];
 
         test("should be latest", async () => {
           const result = await subject();
@@ -193,7 +223,8 @@ describe("PRTriage", () => {
       const subject = argument => klass._createLabel(argument);
 
       test("createLabel() should NOT be called", async () => {
-        klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
         await subject(PRTriage.STATE.UNREVIED);
         expect(github.issues.createLabel).not.toHaveBeenCalled();
       });
@@ -216,7 +247,8 @@ describe("PRTriage", () => {
       const subject = argument => klass._addLabel(argument);
 
       test("addLabels() should not be called", async () => {
-        klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
         await subject(PRTriage.STATE.UNREVIED);
         expect(github.issues.addLabels).not.toHaveBeenCalled();
       });
@@ -261,7 +293,8 @@ describe("PRTriage", () => {
       const subject = argument => klass._removeLabel(argument);
 
       test("should call removeLabel()", async () => {
-        klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
         await subject(PRTriage.STATE.UNREVIED);
         expect(github.issues.removeLabel).toHaveBeenCalled();
       });
@@ -276,7 +309,8 @@ describe("PRTriage", () => {
       describe("and argument is PRTriage.STATE.WIP", () => {
         const klass = new PRTriage({});
         const subject = argument => klass._updateLabel(argument);
-        klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
         klass._addLabel = jest.fn().mockReturnValue(Promise.resolve({}));
         klass._removeLabel = jest.fn().mockReturnValue(Promise.resolve({}));
 
@@ -294,7 +328,8 @@ describe("PRTriage", () => {
       describe("and argument and current are different", () => {
         const klass = new PRTriage({});
         const subject = argument => klass._updateLabel(argument);
-        klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
         klass._addLabel = jest.fn().mockReturnValue(Promise.resolve({}));
         klass._removeLabel = jest.fn().mockReturnValue(Promise.resolve({}));
 
@@ -312,7 +347,8 @@ describe("PRTriage", () => {
       describe("and argument and current are same", () => {
         const klass = new PRTriage({});
         const subject = argument => klass._updateLabel(argument);
-        klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
         klass._addLabel = jest.fn().mockReturnValue(Promise.resolve({}));
         klass._removeLabel = jest.fn().mockReturnValue(Promise.resolve({}));
 
@@ -351,8 +387,11 @@ describe("PRTriage", () => {
       const desiredObj = { color: "fbca04", name: "PR: unreviewed" };
 
       test("should be a label object", async () => {
-        klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
-        await expect(subject(PRTriage.STATE.UNREVIED)).resolves.toEqual(desiredObj);
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        await expect(subject(PRTriage.STATE.UNREVIED)).resolves.toEqual(
+          desiredObj
+        );
       });
     });
 
@@ -376,7 +415,8 @@ describe("PRTriage", () => {
     const desiredStr = PRTriage.STATE.UNREVIED;
 
     test(`should be ${desiredStr}`, () => {
-      klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
+      klass.pullRequest =
+        payload["pull_request"]["with"]["unreviewed_label"]["data"];
       expect(subject()).toEqual(desiredStr);
     });
   });
