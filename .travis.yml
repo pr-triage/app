@@ -27,7 +27,7 @@ after_script:
   - greenkeeper-lockfile-upload
 
 after_success:
-  - npm run travis-deploy-once "npx semantic-release && npx sync-glitch"
+  - npm run travis-deploy-once "npx sync-glitch"
 
 branches:
   only:
