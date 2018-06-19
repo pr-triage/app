@@ -1,16 +1,19 @@
 language: node_js
-
 cache:
   directories:
+    # https://twitter.com/maybekatz/status/905213355748720640
     - ~/.npm
 
-notifications:
-  email: false
-
 node_js:
-  - '10'
-  - '9'
-  - '8'
+  # https://medium.com/@mikeal/stop-supporting-old-releases-70cfa0e04b0c
+  - "lts/*"
+
+# Trigger a push build on master and greenkeeper branches + PRs build on every branches
+# Avoid double build on PRs (See https://github.com/travis-ci/travis-ci/issues/1147)
+branches:
+  only:
+    - master
+    - /^greenkeeper.*$/
 
 before_install:
   - npm install -g npm@5
@@ -27,8 +30,9 @@ after_script:
   - greenkeeper-lockfile-upload
 
 after_success:
-  - npm run travis-deploy-once "npx sync-glitch"
+  - npm run travis-deploy-once "npx sync-glitch-cli"
 
+# Deploy coverage report to GitHub Pages
 deploy:
   provider: pages
   local-dir: "coverage/lcov-report"
@@ -38,7 +42,5 @@ deploy:
   on:
     branch: master
 
-branches:
-  only:
-    - master
-    - /^greenkeeper/.*$/
+notifications:
+  email: false
