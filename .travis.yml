@@ -30,10 +30,11 @@ after_success:
   - npm run travis-deploy-once "npx sync-glitch"
 
 deploy:
-  - cd coverage/lcov-report
-  - git add --all
-  - git commit -m "Deploy to gh-pages"
-  - git push origin gh-pages
+  provider: pages
+  local-dir: "coverage/lcov-report"
+  skip-cleanup: true
+  github-token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
   on:
     branch: master
 
