@@ -17,7 +17,7 @@ before_install:
   - npm install -g greenkeeper-lockfile@1
 
 script:
- - npm run coverage
+  - npm run coverage
 
 before_script:
   - greenkeeper-lockfile-update
@@ -28,6 +28,14 @@ after_script:
 
 after_success:
   - npm run travis-deploy-once "npx sync-glitch"
+
+deploy:
+  - cd coverage/lcov-report
+  - git add --all
+  - git commit -m "Deploy to gh-pages"
+  - git push origin gh-pages
+  on:
+    branch: master
 
 branches:
   only:
