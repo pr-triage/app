@@ -94,7 +94,7 @@
         "data": [{
           "id": 1,
           "user": { "id": 1 },
-          "state": "COMMENT",
+          "state": "COMMENTED",
           "submitted_at": "2018-01-06T08:28:10Z",
           "commit_id": "head"
         }, {

@@ -21,7 +21,7 @@ describe("PRTriage", () => {
     expect(PRTriage.GH_REVIEW_STATE).toEqual({
       APPROVED: "APPROVED",
       CHANGES_REQUESTED: "CHANGES_REQUESTED",
-      COMMENT: "COMMENT"
+      COMMENTED: "COMMENTED"
     });
   }); // static GH_REVIEW_STATE
 
