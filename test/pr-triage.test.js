@@ -321,25 +321,30 @@ describe("PRTriage", () => {
           await subject(PRTriage.STATE.UNREVIED);
           expect(github.issues.removeLabel).toHaveBeenCalled();
         });
-      })
+      });
 
       describe("but removalLabel() rejects", () => {
         // Mock GitHub API
-        const statusCode = 500
+        const statusCode = 500;
         const github = {
           issues: {
-            removeLabel: jest.fn().mockReturnValue(Promise.reject({
-              code: statusCode
-            }))
+            removeLabel: jest.fn().mockReturnValue(
+              Promise.reject({
+                code: statusCode
+              })
+            )
           }
         };
         const klass = new PRTriage(github, {});
         const subject = argument => klass._removeLabel(argument);
         test("shoud throw an error", async () => {
-          klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
-          await expect(subject(PRTriage.STATE.UNREVIED)).rejects.toThrow(new Error({ code: statusCode }));
+          klass.pullRequest =
+            payload["pull_request"]["with"]["unreviewed_label"]["data"];
+          await expect(subject(PRTriage.STATE.UNREVIED)).rejects.toThrow(
+            new Error({ code: statusCode })
+          );
         });
-      })
+      });
     });
   }); // _removeLabel
 
