@@ -210,15 +210,15 @@ describe("PRTriage", () => {
    * _createLabel
    */
   describe("_createLabel", () => {
-    // Mock GitHub API
-    const github = {
-      issues: {
-        getLabel: jest.fn().mockReturnValue(Promise.resolve({})),
-        createLabel: jest.fn().mockReturnValue(Promise.resolve({}))
-      }
-    };
-
     describe("when key exits", () => {
+      // Mock GitHub API
+      const github = {
+        issues: {
+          getLabel: jest.fn().mockReturnValue(Promise.resolve({})),
+          createLabel: jest.fn().mockReturnValue(Promise.resolve({}))
+        }
+      };
+
       const klass = new PRTriage(github, {});
       const subject = argument => klass._createLabel(argument);
 
@@ -227,6 +227,23 @@ describe("PRTriage", () => {
           payload["pull_request"]["with"]["unreviewed_label"]["data"];
         await subject(PRTriage.STATE.UNREVIED);
         expect(github.issues.createLabel).not.toHaveBeenCalled();
+      });
+    });
+
+    describe("when key does not exist", () => {
+      // Mock GitHub API
+      const github = {
+        issues: {
+          getLabel: jest.fn().mockReturnValue(Promise.reject({})),
+          createLabel: jest.fn().mockReturnValue(Promise.resolve({}))
+        }
+      };
+      const klass = new PRTriage(github, {});
+      const subject = argument => klass._createLabel(argument);
+
+      test("hoge", async () => {
+        await subject(PRTriage.STATE.UNREVIED);
+        expect(github.issues.createLabel).toHaveBeenCalled();
       });
     });
   });
@@ -270,14 +287,13 @@ describe("PRTriage", () => {
    * _removeLabel
    */
   describe("_removeLabel", () => {
-    // Mock GitHub API
-    const github = {
-      issues: {
-        removeLabel: jest.fn().mockReturnValue(Promise.resolve({}))
-      }
-    };
-
     describe("when key does NOT exist", () => {
+      // Mock GitHub API
+      const github = {
+        issues: {
+          removeLabel: jest.fn().mockReturnValue(Promise.resolve({}))
+        }
+      };
       const klass = new PRTriage(github, {});
       const subject = argument => klass._removeLabel(argument);
 
@@ -289,15 +305,41 @@ describe("PRTriage", () => {
     });
 
     describe("when key exists", () => {
-      const klass = new PRTriage(github, {});
-      const subject = argument => klass._removeLabel(argument);
+      describe("and removalLabel() resolve", () => {
+        // Mock GitHub API
+        const github = {
+          issues: {
+            removeLabel: jest.fn().mockReturnValue(Promise.resolve({}))
+          }
+        };
+        const klass = new PRTriage(github, {});
+        const subject = argument => klass._removeLabel(argument);
 
-      test("should call removeLabel()", async () => {
-        klass.pullRequest =
-          payload["pull_request"]["with"]["unreviewed_label"]["data"];
-        await subject(PRTriage.STATE.UNREVIED);
-        expect(github.issues.removeLabel).toHaveBeenCalled();
-      });
+        test("should call removeLabel()", async () => {
+          klass.pullRequest =
+            payload["pull_request"]["with"]["unreviewed_label"]["data"];
+          await subject(PRTriage.STATE.UNREVIED);
+          expect(github.issues.removeLabel).toHaveBeenCalled();
+        });
+      })
+
+      describe("but removalLabel() rejects", () => {
+        // Mock GitHub API
+        const statusCode = 500
+        const github = {
+          issues: {
+            removeLabel: jest.fn().mockReturnValue(Promise.reject({
+              code: statusCode
+            }))
+          }
+        };
+        const klass = new PRTriage(github, {});
+        const subject = argument => klass._removeLabel(argument);
+        test("shoud throw an error", async () => {
+          klass.pullRequest = payload["pull_request"]["with"]["unreviewed_label"]["data"];
+          await expect(subject(PRTriage.STATE.UNREVIED)).rejects.toThrow(new Error({ code: statusCode }));
+        });
+      })
     });
   }); // _removeLabel
 

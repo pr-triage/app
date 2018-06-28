@@ -88,6 +88,12 @@ Run a single test:
 $ ./node_modules/.bin/jest -t "<name in `describe` or `test`>"
 ```
 
+## Contributing
+
+If you have suggestions for how pr-triage could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
+
+For more, check out the [Contributing Guide](CONTRIBUTING.md).
+
 ## License
 
-[MIT](LICENSE) © Sam Yamashita
+[MIT](LICENSE) © 2018 Sam Yamashita
