@@ -5,16 +5,18 @@
   "main": "index.js",
   "scripts": {
     "start": "DEBUG=probot* probot run ./index.js",
+    "start:dev": "nodemon --exec \"npm start\"",
     "commit": "git-cz",
     "lint": "prettier --write {index,lib/**/*,test/pr-triage.test}.js",
     "test": "jest",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage",
     "coverage": "npm test  -- --coverage",
     "postcoverage": "codecov",
     "precommit": "npm test && lint-staged",
     "prepush": "npm test",
     "commitmsg": "validate-commit-msg",
-    "travis-deploy-once": "travis-deploy-once --pro",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once --pro"
   },
   "engines": {
     "node": "8.x"
@@ -45,6 +47,7 @@
     "husky": "^0.14.3",
     "jest": "^22.4.4",
     "lint-staged": "^6.1.1",
+    "nodemon": "^1.17.5",
     "prettier": "1.13.4",
     "semantic-release": "^15.5.4",
     "smee-client": "^1.0.1",
