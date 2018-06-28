@@ -1,5 +1,6 @@
 const PRTriage = require("../lib/pr-triage");
 const payload = require("./fixtures/payload");
+require("jest");
 
 describe("PRTriage", () => {
   /**
