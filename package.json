@@ -48,7 +48,7 @@
     "jest": "^22.4.4",
     "lint-staged": "^6.1.1",
     "nodemon": "^1.17.5",
-    "prettier": "1.13.4",
+    "prettier": "1.13.7",
     "semantic-release": "^15.5.4",
     "smee-client": "^1.0.1",
     "sync-glitch-cli": "^2.0.0",
