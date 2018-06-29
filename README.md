@@ -4,16 +4,13 @@
 [codecov badge]: https://codecov.io/gh/pr-triage/pr-triage/branch/master/graph/badge.svg
 [codecov url]:   https://codecov.io/gh/pr-triage/pr-triage
 
-[greenkeeper badge]: https://badges.greenkeeper.io/pr-triage/pr-triage.svg
-[greenkeeper url]:   https://greenkeeper.io/
-
 [codacy badge]: https://api.codacy.com/project/badge/Grade/9bb804751e0f4309b7b72f2183e8cdc8
 [codacy url]:   https://www.codacy.com/app/pr-triage/pr-triage?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pr-triage/pr-triage&amp;utm_campaign=Badge_Grade
 
 [vulnerabilities badge]: https://snyk.io/test/github/pr-triage/pr-triage/badge.svg?targetFile=package.json
 [vulnerabilities url]:   https://snyk.io/test/github/pr-triage/pr-triage?targetFile=package.json
 
-# PRTriage [![build status][build badge]][build url] [![codecov][codecov badge]][codecov url] [![codacy status][codacy badge]][codacy url] [![greenkeeper status][greenkeeper badge]][greenkeeper url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
+# PRTriage [![build status][build badge]][build url] [![codecov][codecov badge]][codecov url] [![codacy status][codacy badge]][codacy url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
 
 > GitHub App built with [Probot](https://github.com/probot/probot) that support pull request workflow
 
