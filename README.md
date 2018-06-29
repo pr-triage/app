@@ -54,9 +54,9 @@ Here are permission and event PRTriage is requested and subscribe:
 ### Setup
 
 1. Go to [PRTriage Sandbox App Page](https://github.com/settings/apps/pr-triage-sandbox)
-  1. Download private key file and place it under project root.
-  1. Set `APP_ID` in `.env` to the ID.
-  1. Set `WEBHOOK_SECRET` in `.env` to the `development`.
+   1. Download private key file and place it under project root.
+   1. Set `APP_ID` in `.env` to the ID.
+   1. Set `WEBHOOK_SECRET` in `.env` to the `development`.
 1. Go to [smee.io](https://smee.io/) and click **Start a new channel**. Set `WEBHOOK_PROXY_URL` in `.env` to the URL.
 1. Start probot on your local machine.
 
