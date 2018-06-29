@@ -38,17 +38,17 @@
   "license": "MIT",
   "dependencies": {
     "debug": "^3.1.0",
-    "probot": "^6.2.0"
+    "probot": "^7.0.0"
   },
   "devDependencies": {
     "codecov": "^3.0.2",
     "commitizen": "^2.10.1",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
-    "jest": "^22.4.4",
-    "lint-staged": "^6.1.1",
+    "jest": "^23.2.0",
+    "lint-staged": "^7.2.0",
     "nodemon": "^1.17.5",
-    "prettier": "1.13.4",
+    "prettier": "1.13.7",
     "semantic-release": "^15.5.4",
     "smee-client": "^1.0.1",
     "sync-glitch-cli": "^2.0.0",
