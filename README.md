@@ -12,6 +12,8 @@
 
 # PRTriage [![build status][build badge]][build url] [![codecov][codecov badge]][codecov url] [![codacy status][codacy badge]][codacy url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pr-triage/pr-triage.svg)](https://greenkeeper.io/)
+
 > GitHub App built with [Probot](https://github.com/probot/probot) that support pull request workflow
 
 
