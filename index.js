@@ -26,8 +26,7 @@ async function triage(context) {
   }
 
   const prTriage = forRepository(context);
-  const pullRequest =
-    context.payload.pull_request || context.payload.review.pull_request;
+  const pullRequest = getPullRequest(context);
 
   Raven.context(() => {
     Raven.setContext({
@@ -44,6 +43,10 @@ async function triage(context) {
 function forRepository(context) {
   const config = Object.assign({}, context.repo({ logger: debug }));
   return new PRTriage(context.github, config);
+}
+
+function getPullRequest(context) {
+  return context.payload.pull_request || context.payload.review.pull_request;
 }
 
 module.exports = probotPlugin;
