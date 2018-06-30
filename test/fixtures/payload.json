@@ -10,21 +10,30 @@
         "data": {
           "title": "Pull Request with unreviewed label",
           "labels": [{ "name": "PR: unreviewed" }],
-          "state": "open"
+          "state": "open",
+          "head": {
+            "sha": "head"
+          }
         }
       },
       "reviewed_approved_label": {
         "data": {
           "title": "Pull Request with reviewed approved label",
           "labels": [{ "name": "PR: reviewed-approved" }],
-          "state": "open"
+          "state": "open",
+          "head": {
+            "sha": "head"
+          }
         }
       },
       "reviewed_changes_requested_label": {
         "data": {
           "title": "Pull Request with reviewed changes requested",
           "labels": [{ "name": "PR: reviewed-changes-requested" }],
-          "state": "open"
+          "state": "open",
+          "head": {
+            "sha": "head"
+          }
         }
       }
     }

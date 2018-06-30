@@ -1,8 +1,13 @@
 const debug = require("debug")("probot:pr-triage");
+const Raven = require("raven");
 const PRTriage = require("./lib/pr-triage");
 
+Raven.config(
+  process.env.NODE_ENV === "production" &&
+    "https://dce36edab6334112b02122e07b2bc549@sentry.io/1222067"
+).install();
+
 function probotPlugin(robot) {
-  debug("ready to receive GitHub webhooks");
   const events = [
     "pull_request.opened",
     "pull_request.edited",
@@ -21,19 +26,27 @@ async function triage(context) {
   }
 
   const prTriage = forRepository(context);
-  prTriage.triage();
+  const pullRequest = getPullRequest(context);
+
+  Raven.context(() => {
+    Raven.setContext({
+      extra: {
+        owner: context.repo()["owner"],
+        repo: context.repo()["repo"],
+        number: pullRequest.number
+      }
+    });
+    prTriage.triage(pullRequest);
+  });
 }
 
 function forRepository(context) {
-  // Extract pull request object depends on context
-  const pullRequest =
-    context.payload.pull_request || context.payload.review.pull_request;
-  const config = Object.assign(
-    {},
-    context.issue({ sha: pullRequest.head.sha })
-  );
-
+  const config = Object.assign({}, context.repo({ logger: debug }));
   return new PRTriage(context.github, config);
+}
+
+function getPullRequest(context) {
+  return context.payload.pull_request || context.payload.review.pull_request;
 }
 
 module.exports = probotPlugin;
