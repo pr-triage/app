@@ -3,6 +3,8 @@
 
 # PRTriage [![build status][build badge]][build url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pr-triage/app.svg)](https://greenkeeper.io/)
+
 > GitHub App built with [Probot](https://github.com/probot/probot) that support pull request workflow
 
 
