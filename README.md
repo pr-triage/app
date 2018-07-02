@@ -1,7 +1,13 @@
 [build badge]: https://travis-ci.com/pr-triage/app.svg?branch=master
 [build url]:   https://travis-ci.com/pr-triage/app
 
-# PRTriage [![build status][build badge]][build url]
+[dep badge]:   https://badges.greenkeeper.io/pr-triage/app.svg
+[dep url]:     https://greenkeeper.io/
+
+[vulnerabilities badge]: https://snyk.io/test/github/pr-triage/app/badge.svg?targetFile=package.json
+[vulnerabilities url]:   https://snyk.io/test/github/pr-triage/app?targetFile=package.json
+
+# PRTriage [![build status][build badge]][build url] [![dep status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
 
 > GitHub App built with [Probot](https://github.com/probot/probot) that support pull request workflow
 
