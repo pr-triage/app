@@ -5,7 +5,7 @@
 [dep url]:     https://greenkeeper.io/
 
 [vulnerabilities badge]: https://snyk.io/test/github/pr-triage/app/badge.svg?targetFile=package.json
-:   https://snyk.io/test/github/pr-triage/app?targetFile=package.json
+[vulnerabilities url]:   https://snyk.io/test/github/pr-triage/app?targetFile=package.json
 
 # PRTriage [![build status][build badge]][build url] [![dep status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
 
