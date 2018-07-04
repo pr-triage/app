@@ -20,11 +20,6 @@ function probotPlugin(robot) {
 }
 
 async function triage(context) {
-  // skip if the actor on the event was a bot.
-  if (context.isBot) {
-    return false;
-  }
-
   const prTriage = forRepository(context);
   const pullRequest = getPullRequest(context);
 
