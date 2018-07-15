@@ -13,18 +13,14 @@ function probotPlugin(robot) {
     "pull_request.edited",
     "pull_request.synchronize",
     "pull_request.reopened",
-    "pull_request_review.submitted"
+    "pull_request_review.submitted",
+    "pull_request_review.dismissed"
   ];
 
   robot.on(events, triage);
 }
 
 async function triage(context) {
-  // skip if the actor on the event was a bot.
-  if (context.isBot) {
-    return false;
-  }
-
   const prTriage = forRepository(context);
   const pullRequest = getPullRequest(context);
 
