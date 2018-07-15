@@ -13,7 +13,8 @@ function probotPlugin(robot) {
     "pull_request.edited",
     "pull_request.synchronize",
     "pull_request.reopened",
-    "pull_request_review.submitted"
+    "pull_request_review.submitted",
+    "pull_request_review.dismissed"
   ];
 
   robot.on(events, triage);
