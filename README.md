@@ -7,7 +7,9 @@
 [vulnerabilities badge]: https://snyk.io/test/github/pr-triage/app/badge.svg?targetFile=package.json
 [vulnerabilities url]:   https://snyk.io/test/github/pr-triage/app?targetFile=package.json
 
-# PRTriage [![build status][build badge]][build url] [![dep status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
+# PRTriage  [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Know%20your%20pull%20request%20status.%20to%20add%20an%20appropriate%20label&url=https://github.com/pr-triage/app&via=sota0805&hashtags=github,probot)
+
+[![build status][build badge]][build url] [![dep status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
 
 > GitHub App built with [Probot](https://github.com/probot/probot) that support pull request workflow
 
