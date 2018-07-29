@@ -15,12 +15,17 @@
 > GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
 
 
+## Motivation
+
+Firstly, I started to create PRTriage to solve my own pain. As an engineer, I spent my time to ask pull requests status such as WIP, Reviewed, Need change or Approved. Most of developers use [GitHub](https://github.com) and follow [GitHub Flow](https://guides.github.com/introduction/flow/) and most of people say that the time it takes to know pull request status is getting increasing as team is large.
+
+
 ## Install
 
 Please follow the below steps to install this app to your repository:
 
 1. :runner: Go to [PRTriage App Page](https://github.com/apps/pr-triage)
-1. :rocket: Click **Install**
+1. :rocket: Click "**Install**"
 1. :mag: Choose a repository
 1. :sparkles: That's it.
 
