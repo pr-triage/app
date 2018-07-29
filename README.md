@@ -37,4 +37,4 @@ If you have suggestions for how PRTriage could be improved :100:, or want to rep
 
 ## License
 
-[MIT](LICENSE) © 2018 Sam Yamashita
+License: [Apache 2.0](LICENSE). [Privacy Policy](https://github.com/pr-triage/policies/blob/master/PRIVACY.md). [Security Policy](https://github.com/pr-triage/policies/blob/master/SECURITY.md)
