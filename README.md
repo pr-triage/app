@@ -10,88 +10,25 @@
 [vulnerabilities badge]: https://snyk.io/test/github/pr-triage/app/badge.svg?targetFile=package.json
 [vulnerabilities url]:   https://snyk.io/test/github/pr-triage/app?targetFile=package.json
 
-# PRTriage  [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Know%20your%20pull%20request%20status.%20to%20add%20an%20appropriate%20label&url=https://github.com/pr-triage/app&via=sota0805&hashtags=github,probot)
+# PRTriage [![build status][build badge]][build url] [![dep status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
 
-[![build status][build badge]][build url] [![dep status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
-
-> GitHub App built with [Probot](https://github.com/probot/probot) that support pull request workflow
+> GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
 
 
 ## Install
 
-PRTriage does **"NOT"** have permission to `Read & Write` your code :see_no_evil:. For more details, see [Permission and Subscribe section](#permission--subscribe-event). If you have any question, please free to ask us via [creating an issue](https://github.com/pr-triage/pr-triage/issues/new?labels=question).
+Please follow the below steps to install this app to your repository:
 
 1. :runner: Go to [PRTriage App Page](https://github.com/apps/pr-triage)
 1. :rocket: Click **Install**
-1. :mag: Please choose a repository
+1. :mag: Choose a repository
 1. :sparkles: That's it.
 
 
-## How it works
-
-<p>
-  <img src="https://user-images.githubusercontent.com/1587053/35917561-f4928e02-0c51-11e8-95d3-81b4f44ed6d2.png" width="100%">
-</p>
-
-- Do nothing if your title of PR starts from `WIP`, `[WIP]` or `WIP:`.
-- Add a `PR: unreviewed` label if your PR does not have any reviews for latest commit.
-- Add a `PR: reviewed-changes-requested` label if your PR have reviewed and got **Change request** for latest commit.
-- Add a `PR: review-approved` label if your PR have reviewed and got **Approve** for latest commit.
-
-
-## Permission & Subscribe event
-
-Here are permission and event PRTriage is requested and subscribe:
-
-- :x: **No** access to code
-- :white_check_mark: Read access to metadata
-- :white_check_mark: Read and write access to pull requests to create, add and remove labels PRTriage manipulate.
-
-
-## Develop
-
-### Setup
-
-1. Go to [PRTriage Sandbox App Page](https://github.com/settings/apps/pr-triage-sandbox)
-   1. Download private key file and place it under project root.
-   1. Set `APP_ID` in `.env` to the ID.
-   1. Set `WEBHOOK_SECRET` in `.env` to the `development`.
-1. Go to [smee.io](https://smee.io/) and click **Start a new channel**. Set `WEBHOOK_PROXY_URL` in `.env` to the URL.
-1. Start probot on your local machine.
-
-### Simulate
-
-Simulate a pull request event:
-
-```bash
-$ ./node_modules/.bin/probot simulate pull_request test/simulates/pull_request.opened.json ./index.js
-```
-
-Simulate a pull request review event:
-
-```bash
-$ ./node_modules/.bin/probot simulate pull_request_review test/simulates/pull_request_review.submitted.approved.json ./index.js
-```
-
-### Test
-
-Run all tests:
-
-```bash
-$ npm test
-```
-
-Run a single test:
-
-```bash
-$ ./node_modules/.bin/jest -t "<name in `describe` or `test`>"
-```
-
 ## Contributing
 
-If you have suggestions for how pr-triage could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
+If you have suggestions for how PRTriage could be improved :100:, or want to report a bug :bug:, open an issue! We'd love all and any contributions :heart:. For more information, check out the [Contributing Guide](CONTRIBUTING.md).
 
-For more, check out the [Contributing Guide](CONTRIBUTING.md).
 
 ## License
 
