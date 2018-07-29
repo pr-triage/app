@@ -49,4 +49,5 @@ deploy:
     branch: master
 
 notifications:
-  email: false
+  email:
+    on_failure: always
