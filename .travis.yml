@@ -14,13 +14,6 @@ node_js:
 branches:
   only:
     - master
-    - /^greenkeeper.*$/
-
-before_install:
-  # package-lock.json was introduced in npm@5
-  # see https://github.com/greenkeeperio/greenkeeper-lockfile#example-travis-ci-configurations
-  - '[[ $(node -v) =~ ^v9.*$ ]] || npm install -g npm@latest' # skipped when using node 9
-  - npm install -g greenkeeper-lockfile
 
 install:
   - npm install
@@ -29,11 +22,7 @@ script:
   - npm run coverage
 
 before_script:
-  - greenkeeper-lockfile-update
   - npm prune
-
-after_script:
-  - greenkeeper-lockfile-upload
 
 after_success:
   - npm run travis-deploy-once "npx sync-glitch-cli"

@@ -1,8 +1,8 @@
 [build badge]: https://travis-ci.com/pr-triage/app.svg?branch=master
 [build url]:   https://travis-ci.com/pr-triage/app
 
-[dep badge]:   https://badges.greenkeeper.io/pr-triage/app.svg
-[dep url]:     https://greenkeeper.io/
+[dep badge]:   https://api.dependabot.com/badges/status?host=github&repo=pr-triage/app
+[dep url]:     https://dependabot.com
 
 [coverage badge]: https://codecov.io/gh/pr-triage/app/branch/master/graph/badge.svg
 [coverage url]:   https://codecov.io/gh/pr-triage/app
@@ -10,7 +10,7 @@
 [vulnerabilities badge]: https://snyk.io/test/github/pr-triage/app/badge.svg?targetFile=package.json
 [vulnerabilities url]:   https://snyk.io/test/github/pr-triage/app?targetFile=package.json
 
-# PRTriage [![build status][build badge]][build url] [![dep status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
+# PRTriage [![build status][build badge]][build url] [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
 
 > GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
 
