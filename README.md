@@ -17,24 +17,27 @@
 
 ## Motivation
 
-Firstly, I started to create PRTriage to solve my own pain. As an engineer, I spent my time to ask pull requests status such as WIP, Reviewed, Need change or Approved. Most of developers use [GitHub](https://github.com) and follow [GitHub Flow](https://guides.github.com/introduction/flow/) and most of people say that the time it takes to know pull request status is getting increasing as team is large.
+Firstly, I started to create PRTriage to solve my own pain. As an engineer, I spent my time to ask colleagues pull requests status such as **"WIP"**, **"Reviewed"**, **"Need change"** or **"Approved"**. Most of developers use [GitHub](https://github.com) and follow [GitHub Flow](https://guides.github.com/introduction/flow/)/[Git Flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) and most of them say that the time it takes to know pull request status is getting increasing as team is large so I published it as Open Source :sparkles:.
 
 
-## Install
+## Installation
 
-Please follow the below steps to install this app to your repository:
+Please follow the below steps to install quickly :rocket::
 
-1. :runner: Go to [PRTriage App Page](https://github.com/apps/pr-triage)
-1. :rocket: Click "**Install**"
-1. :mag: Choose a repository
-1. :sparkles: That's it.
+1. Go to [PRTriage App top page](https://probot.github.io/apps/pr-triage/)
+1. Click **"+ Add to GitHub"** button
+1. Choose a repository
+1. That's it :sparkles:
 
 
 ## Contributing
 
-If you have suggestions for how PRTriage could be improved :100:, or want to report a bug :bug:, open an issue! We'd love all and any contributions :heart:. For more information, check out the [Contributing Guide](CONTRIBUTING.md).
+Please read [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 
 ## License
 
-License: [Apache 2.0](LICENSE). [Privacy Policy](https://github.com/pr-triage/policies/blob/master/PRIVACY.md). [Security Policy](https://github.com/pr-triage/policies/blob/master/SECURITY.md)
+PRTriage © Sam Yamashita. Released under the [Apache 2.0](LICENSE)<br/>
+Authored and maintained by Sam Yamashita with help from [contributors](https://github.com/pr-triage/app/contributors).
+
+[Privacy Policy](https://github.com/pr-triage/policies/blob/master/PRIVACY.md)・[Security Policy](https://github.com/pr-triage/policies/blob/master/SECURITY.md)
