@@ -10,7 +10,11 @@
 [vulnerabilities badge]: https://snyk.io/test/github/pr-triage/app/badge.svg?targetFile=package.json
 [vulnerabilities url]:   https://snyk.io/test/github/pr-triage/app?targetFile=package.json
 
-# PRTriage [![build status][build badge]][build url] [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
+[spectrum badge]: https://withspectrum.github.io/badge/badge.svg
+[spectrum url]:   https://spectrum.chat/pr-triage/
+
+# PRTriage [![build status][build badge]][build url] [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url] [![Join the community on Spectrum][spectrum badge]][spectrum url]
+
 
 > GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
 
