@@ -1,6 +1,7 @@
 const debug = require("debug")("probot:pr-triage");
 const Raven = require("raven");
 const PRTriage = require("./lib/pr-triage");
+const getConfig = require('probot-config');
 
 Raven.config(
   process.env.NODE_ENV === "production" &&
