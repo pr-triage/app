@@ -37,7 +37,7 @@
   "author": "Sam Yamashita",
   "license": "MIT",
   "dependencies": {
-    "debug": "^3.1.0",
+    "debug": "^4.0.1",
     "probot": "^7.0.0"
   },
   "devDependencies": {
