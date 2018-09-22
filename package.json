@@ -54,7 +54,8 @@
     "smee-client": "^1.0.1",
     "sync-glitch-cli": "^2.0.0",
     "travis-deploy-once": "^5.0.0",
-    "validate-commit-msg": "^2.14.0"
+    "validate-commit-msg": "^2.14.0",
+    "probot-config": "^0.1.0"
   },
   "config": {
     "commitizen": {
