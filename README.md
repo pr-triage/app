@@ -10,10 +10,7 @@
 [vulnerabilities badge]: https://snyk.io/test/github/pr-triage/app/badge.svg?targetFile=package.json
 [vulnerabilities url]:   https://snyk.io/test/github/pr-triage/app?targetFile=package.json
 
-[spectrum badge]: https://withspectrum.github.io/badge/badge.svg
-[spectrum url]:   https://spectrum.chat/pr-triage/
-
-# PRTriage [![build status][build badge]][build url] [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url] [![Join the community on Spectrum][spectrum badge]][spectrum url]
+# PRTriage [![build status][build badge]][build url] [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
 
 
 > GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
@@ -32,7 +29,6 @@ Please follow the below steps to install quickly :rocket::
 1. Choose a repository
 1. That's it :sparkles:
 
-
 ## How it works
 
 Only watching the most recent commit :eyes::
@@ -41,6 +37,22 @@ Only watching the most recent commit :eyes::
 - Add the `PR: unreviewed` label when the PR does not have any reviews.
 - Add the `PR: reviewed-changes-requested` label when the PR has reviewed and got `Change request` event.
 - Add the `PR: review-approved` label when the PR has reviewed and got `Approve` event.
+
+
+## Installation for GitHub Enterprise
+
+Please follow the below steps to install for GitHub Enterprise :rocket::
+
+1. Go to GitHub Enterprise URL. E.g. `fake.github-enterprise.com`
+1. Go to `fake.github-enterprise.com/settings/apps/new`
+1. Create a new app which has Permissions and Subscribe to events below:
+    - Permissions
+        - Pull request
+            - Access: Read & Write
+    - Subscribe to events
+        - Pull request
+        - Pull request review
+1. Deploy the app to Glitch, Heroku or Now.
 
 
 ## Contributing
