@@ -53,6 +53,7 @@ Please follow the below steps to install for GitHub Enterprise :rocket::
         - Pull request
         - Pull request review
 1. Deploy the app to Glitch, Heroku or Now.
+    - [Read more about how to deploy app](https://probot.github.io/docs/deployment/)
 
 
 ## Contributing
