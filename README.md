@@ -12,7 +12,6 @@
 
 # PRTriage [![build status][build badge]][build url] [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
 
-
 > GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
 
 
@@ -32,6 +31,10 @@ Please follow the below steps to install quickly :rocket::
 ## How it works
 
 Only watching the most recent commit :eyes::
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/pr-triage/app/master/public/assets/screenshots/workflow.png" width="100%" height="auto" />
+</p>
 
 - Do nothing when the PR's title starts from `WIP`, `[WIP]` or `WIP:`.
 - Add the `PR: unreviewed` label when the PR does not have any reviews.
