@@ -58,7 +58,7 @@ Please follow the below steps to install for GitHub Enterprise :rocket::
 1. Deploy the app to Glitch, Heroku or Now.
     - [Read more about how to deploy app](https://probot.github.io/docs/deployment/)
 
-## Who use PRTriage
+## Who use PRTriage?
 
 Example users include the following GitHub organizations:
 
