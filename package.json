@@ -46,7 +46,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^1.0.0",
     "jest": "^23.2.0",
-    "lint-staged": "^7.2.0",
+    "lint-staged": "^8.0.2",
     "nodemon": "^1.17.5",
     "prettier": "1.14.3",
     "raven": "^2.6.3",
