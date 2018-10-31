@@ -64,7 +64,7 @@ Example users include the following GitHub organizations:
 
 [<img align="left" src="https://avatars3.githubusercontent.com/u/6128107?s=60&v=4" alt="vuejs" title="vuejs"  space="5"/>](https://github.com/vuejs)
 
-[<img align="left" src="https://avatars3.githubusercontent.com/u/11144750?s=60&v=4" alt="vuejs-jp" title="vuejs-jp"  space="5"/>](https://github.com/vuejs-jp)
+[<img align="left" src="https://avatars3.githubusercontent.com/u/11144750?s=80&v=4" alt="vuejs-jp" title="vuejs-jp"  space="5"/ style="max-width:100%;margin-top: -12px;">](https://github.com/vuejs-jp)
 
 [<img align="left" src="https://avatars2.githubusercontent.com/u/13521919?s=60&v=4" alt="The Practical Dev" title="The Practical Dev"  space="5"/>](https://github.com/thepracticaldev)
 
