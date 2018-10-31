@@ -13,7 +13,8 @@ describe("PRTriage", () => {
       WIP: expect.any(String),
       UNREVIED: expect.any(String),
       APPROVED: expect.any(String),
-      CHANGES_REQUESTED: expect.any(String)
+      CHANGES_REQUESTED: expect.any(String),
+      MERGED: expect.any(String)
     });
   }); // static STATE
 
@@ -40,6 +41,18 @@ describe("PRTriage", () => {
           payload["pull_request"]["with"]["wip_title"]["data"];
         const result = await subject();
         expect(result).toEqual(PRTriage.STATE.WIP);
+      });
+    });
+
+    describe("when pull request merged", () => {
+      const klass = new PRTriage({}, { owner, repo });
+      const subject = () => klass._getState();
+
+      test("should be STATE.MERGED", async () => {
+        klass.pullRequest =
+          payload["pull_request"]["with"]["merged"]["data"];
+        const result = await subject();
+        expect(result).toEqual(PRTriage.STATE.MERGED);
       });
     });
 
@@ -208,7 +221,7 @@ describe("PRTriage", () => {
   describe("_ensurePRTriageLabelExists", () => {
     const klass = new PRTriage({}, { owner, repo });
     klass._createLabel = jest.fn().mockReturnValue(Promise.resolve({}));
-    const n = 3;
+    const n = 4;
 
     test(`createLabel() should be called ${n} times`, async () => {
       await klass._ensurePRTriageLabelExists();
