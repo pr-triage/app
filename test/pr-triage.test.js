@@ -49,8 +49,7 @@ describe("PRTriage", () => {
       const subject = () => klass._getState();
 
       test("should be STATE.MERGED", async () => {
-        klass.pullRequest =
-          payload["pull_request"]["with"]["merged"]["data"];
+        klass.pullRequest = payload["pull_request"]["with"]["merged"]["data"];
         const result = await subject();
         expect(result).toEqual(PRTriage.STATE.MERGED);
       });

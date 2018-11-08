@@ -19,7 +19,7 @@
     "travis-deploy-once": "travis-deploy-once --pro"
   },
   "engines": {
-    "node": "8.x"
+    "node": ">= 8"
   },
   "repository": {
     "type": "git",
