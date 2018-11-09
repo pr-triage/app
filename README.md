@@ -44,17 +44,24 @@ Only watching the most recent commit :eyes::
 
 ## Installation for GitHub Enterprise
 
-Please follow the below steps to install for GitHub Enterprise :rocket::
+Please follow the steps to install for GitHub Enterprise :rocket::
 
 1. Go to GitHub Enterprise URL. E.g. `fake.github-enterprise.com`
 1. Go to `fake.github-enterprise.com/settings/apps/new`
-1. Create a new app which has Permissions and Subscribe to events below:
-    - Permissions
-        - Pull request
-            - Access: Read & Write
-    - Subscribe to events
-        - Pull request
-        - Pull request review
+1. [Create a new GitHub App](https://github.com/settings/apps/new) with:
+  - GitHub App name
+    - Input [whatever you want]
+  - Homepage URL
+    - Input [whatever you want]
+  - Webhook URL
+    - Input [Webhook URL which is depend on your deployment environement]
+      - [Read more about how to deploy app](https://probot.github.io/docs/deployment/)
+  - Permissions
+    - Pull request
+      - Select From List By [Access: Read & Write]
+  - Subscribe to events
+    - Select Checkbox [Pull request]
+    - Select Checkbox [Pull request review]
 1. Deploy the app to Glitch, Heroku or Now.
     - [Read more about how to deploy app](https://probot.github.io/docs/deployment/)
 
