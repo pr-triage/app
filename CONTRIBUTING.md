@@ -17,8 +17,39 @@ We'd also love PRs. If you're thinking of a large PR, we advise opening up an is
 
 ## Submitting a pull request
 
+### Setup
 1. [Fork][fork] and clone the repository.
+1. Clone this repository:
+   ```bash
+   git clone git@github.com:<YOUR USERNAME>/app.git
+   ```
 1. Configure and install the dependencies: `npm install`.
+1. Copy `.env.example` to `.env`.
+   ```bash
+   cp .env.example .env
+   ```
+1. Create a webhook proxy url with https://smee.io/new.
+1. [Create a new GitHub App](https://github.com/settings/apps/new) with:
+  - GitHub App name
+    - Input [whatever you want]
+  - Homepage URL
+    - Input [whatever you want]
+  - Webhook URL
+    - Input [WEBHOOK_PROXY_URL]
+  - Permissions
+    - Pull request
+      - Select From List By [Access: Read & Write]
+  - Subscribe to events
+    - Select Checkbox [Pull request]
+    - Select Checkbox [Pull request review]
+1. Download the private key and move it to your project's directory.
+1. Edit `.env` and set `APP_ID` to the `APP_ID=` of the app you just created and set `WEBHOOK_PROXY_URL` to the `WEBHOOK_PROXY_URL=`
+1. Start the app
+   ```
+   npm run dev
+   ```
+
+### Develop
 1. Make sure the tests pass on your machine: `npm test`.
 1. Create a new branch: `git checkout -b my-branch-name`.
 1. Make your change, add tests, and make sure the tests still pass.
