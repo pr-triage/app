@@ -46,24 +46,38 @@ Only watching the most recent commit :eyes::
 
 Please follow the steps to install for GitHub Enterprise :rocket::
 
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:pr-triage/app.git && cd app
+   ```
+1. Install the dependencies:
+   ```bash
+   npm install
+   ```
+1. Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
 1. Go to GitHub Enterprise URL. E.g. `fake.github-enterprise.com`
-1. Go to `fake.github-enterprise.com/settings/apps/new`
-1. [Create a new GitHub App](https://github.com/settings/apps/new) with:
-  - GitHub App name
-    - Input [whatever you want]
-  - Homepage URL
-    - Input [whatever you want]
-  - Webhook URL
-    - Input [Webhook URL which is depend on your deployment environement]
-      - [Read more about how to deploy app](https://probot.github.io/docs/deployment/)
-  - Permissions
-    - Pull request
-      - Select From List By [Access: Read & Write]
-  - Subscribe to events
-    - Select Checkbox [Pull request]
-    - Select Checkbox [Pull request review]
+1. Go to `fake.github-enterprise.com/settings/apps/new` to create a new GitHub App.
+1. Fill in following items on GitHub App configuration page:
+   - GitHub App name
+     - Input [whatever you want]
+   - Homepage URL
+     - Input [whatever you want]
+   - Webhook URL
+     - Input [Webhook URL which is depend on your deployment environement]
+   - Permissions
+     - Pull request
+       - Select From List By [Access: Read & Write]
+   - Subscribe to events
+     - Select Checkbox [Pull request]
+     - Select Checkbox [Pull request review]
+1. Download the private key and move it to your project's directory.
 1. Deploy the app to Glitch, Heroku or Now.
     - [Read more about how to deploy app](https://probot.github.io/docs/deployment/)
+1. Edit `.env` and set `APP_ID` to the ID
+1. Edit the your GitHub App configuration page and set `Webhook URL` to the URL depending on your deployment environment.
 
 ## Who use PRTriage?
 
