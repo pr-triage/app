@@ -87,6 +87,8 @@ Example users include the following GitHub organizations:
 
 [<img align="left" src="https://avatars2.githubusercontent.com/u/13521919?s=60&v=4" alt="The Practical Dev" title="The Practical Dev"  space="5"/>](https://github.com/thepracticaldev)
 
+[<img align="left" src="https://avatars2.githubusercontent.com/u/11468134?s=60&v=4" alt="Linio" title="Linio"  space="5"/>](https://github.com/LinioIT)
+
 <br/><br/>
 
 ## Contributing
