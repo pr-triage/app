@@ -10,6 +10,7 @@ Raven.config(
 function probotPlugin(robot) {
   const events = [
     "pull_request.opened",
+    "pull_request.closed",
     "pull_request.edited",
     "pull_request.synchronize",
     "pull_request.reopened",

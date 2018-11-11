@@ -17,7 +17,7 @@
 
 ## Motivation
 
-Firstly, I started to create PRTriage to solve my own pain. As an engineer, I spent my time to ask colleagues Pull Requests status such as `WIP (work in progress)`・`UNREVIEWED`・`CHANGES_REQUESTED`・`APPROVED`. Most of the developers use [GitHub](https://github.com) and follow [GitHub Flow](https://guides.github.com/introduction/flow/)/[Git Flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html). Most of them say that the time it takes to know pull request status is getting increasing as the team is large so I published it as Open Source :sparkles:.
+Firstly, I started to create PRTriage to solve my own pain. As an engineer, I spent my time to ask colleagues Pull Requests status such as `WIP (work in progress)`・`UNREVIEWED`・`CHANGES_REQUESTED`・`APPROVED`・`MERGED`. Most of the developers use [GitHub](https://github.com) and follow [GitHub Flow](https://guides.github.com/introduction/flow/)/[Git Flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html). Most of them say that the time it takes to know pull request status is getting increasing as the team is large so I published it as Open Source :sparkles:.
 
 ## Installation
 
@@ -40,6 +40,7 @@ Only watching the most recent commit :eyes::
 - Add the `PR: unreviewed` label when the PR does not have any reviews.
 - Add the `PR: reviewed-changes-requested` label when the PR has reviewed and got `Change request` event.
 - Add the `PR: review-approved` label when the PR has reviewed and got `Approve` event.
+- Add the `PR: merged` label when the PR has merged.
 
 
 ## Installation for GitHub Enterprise

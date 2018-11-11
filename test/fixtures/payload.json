@@ -6,6 +6,17 @@
           "title": "WIP: pull request is work in progress"
         }
       },
+      "merged": {
+        "data": {
+          "title": "Pull Request with unreviewed and merged",
+          "labels": [{ "name": "PR: unreviewed" }],
+          "state": "closed",
+          "head": {
+            "sha": "head"
+          },
+          "merged": true
+        }
+      },
       "unreviewed_label": {
         "data": {
           "title": "Pull Request with unreviewed label",
