@@ -25,7 +25,7 @@ before_script:
   - npm prune
 
 after_success:
-  - npm run travis-deploy-once "npx sync-glitch-cli"
+  - npx travis-deploy-once --pro "npx sync-glitch-cli" 
 
 # Deploy coverage report to GitHub Pages
 deploy:
