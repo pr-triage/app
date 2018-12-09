@@ -90,7 +90,7 @@ We'd also love PRs. If you're thinking of a large PR, we advise opening up an is
 
     -   Set the App ID to the `APP_ID=` of the app
     -   Set `development` to the `WEBHOOK_SECRET=`
-    -   Set the URL which is generated with smee.io to the \`WEBHOOK_PROXY_URL=``
+    -   Set the URL which is generated with smee.io to the \`WEBHOOK_PROXY_URL=`
 
     ```bash
     $ cat .env
