@@ -20,7 +20,7 @@
       "unreviewed_label": {
         "data": {
           "title": "Pull Request with unreviewed label",
-          "labels": [{ "name": "Status: Review Needed :passport_control:" }],
+          "labels": [{ "name": "PR: unreviewed" }],
           "state": "open",
           "head": {
             "sha": "head"
@@ -30,7 +30,7 @@
       "reviewed_approved_label": {
         "data": {
           "title": "Pull Request with reviewed approved label",
-          "labels": [{ "name": "Status: Accepted :heavy_check_mark:" }],
+          "labels": [{ "name": "PR: reviewed-approved" }],
           "state": "open",
           "head": {
             "sha": "head"
@@ -40,7 +40,7 @@
       "reviewed_changes_requested_label": {
         "data": {
           "title": "Pull Request with reviewed changes requested",
-          "labels": [{ "name": "Status: Changes requested" }],
+          "labels": [{ "name": "PR: reviewed-changes-requested" }],
           "state": "open",
           "head": {
             "sha": "head"
