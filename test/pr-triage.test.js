@@ -1,5 +1,6 @@
 const PRTriage = require("../lib/pr-triage");
 const payload = require("./fixtures/payload");
+const defaults = require("../lib/defaults");
 
 describe("PRTriage", () => {
   const owner = "pr-triage";
@@ -220,7 +221,7 @@ describe("PRTriage", () => {
   describe("_ensurePRTriageLabelExists", () => {
     const klass = new PRTriage({}, { owner, repo });
     klass._createLabel = jest.fn().mockReturnValue(Promise.resolve({}));
-    const n = 4;
+    const n = 5; //5 labels
 
     test(`createLabel() should be called ${n} times`, async () => {
       await klass._ensurePRTriageLabelExists();
@@ -454,7 +455,7 @@ describe("PRTriage", () => {
     describe("when key exists", () => {
       const klass = new PRTriage({}, { owner, repo });
       const subject = argument => klass._getLabel(argument);
-      const desiredObj = { color: "fbca04", name: "PR: unreviewed" };
+      const desiredObj = defaults.labelUnreviewed;
 
       test("should be a label object", async () => {
         klass.pullRequest =
@@ -525,7 +526,7 @@ describe("PRTriage", () => {
     describe("when key exists", () => {
       const klass = new PRTriage({}, { owner, repo });
       const subject = argument => klass._getConfigObj(argument);
-      const desiredObj = { color: "fbca04", name: "PR: unreviewed" };
+      const desiredObj = defaults.labelUnreviewed;
 
       test("should be desiredObj", () => {
         expect(subject(PRTriage.STATE.UNREVIED)).toEqual(desiredObj);
