@@ -48,7 +48,7 @@
     "jsonwebtoken": "^8.3.0",
     "lint-staged": "^8.0.3",
     "nodemon": "^1.17.5",
-    "prettier": "1.15.3",
+    "prettier": "1.16.0",
     "probot-config": "^1.0.0",
     "raven": "^2.6.3",
     "semantic-release": "^15.5.4",
