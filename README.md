@@ -90,6 +90,8 @@ Example users include the following GitHub organizations:
 
 [<img align="left" src="https://avatars2.githubusercontent.com/u/11468134?s=60&v=4" alt="Linio" title="Linio"  space="5"/>](https://github.com/LinioIT)
 
+[<img align="left" src="https://avatars3.githubusercontent.com/u/10746780?s=60&v=4" alt="Redash" title="Redash"  space="5"/>](https://github.com/getredash)
+
 <br/><br/>
 
 ## Contributing
