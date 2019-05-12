@@ -58,7 +58,7 @@ describe("PRTriage", () => {
     describe("when there are NO reviews", () => {
       const github = {
         pullRequests: {
-          getReviews: jest.fn().mockReturnValue(Promise.resolve({}))
+          listReviews: jest.fn().mockReturnValue(Promise.resolve({}))
         }
       };
       const klass = new PRTriage(github, { owner, repo });
@@ -75,7 +75,7 @@ describe("PRTriage", () => {
     describe("when number of CHANGES_REQUESTED is more than 0", () => {
       const github = {
         pullRequests: {
-          getReviews: jest
+          listReviews: jest
             .fn()
             .mockReturnValue(
               Promise.resolve(
@@ -98,7 +98,7 @@ describe("PRTriage", () => {
     describe("when number of reviews and approved reviews are same", () => {
       const github = {
         pullRequests: {
-          getReviews: jest
+          listReviews: jest
             .fn()
             .mockReturnValue(
               Promise.resolve(payload["reviews"]["should_be"]["approve"])
@@ -125,7 +125,7 @@ describe("PRTriage", () => {
       describe("and filtered by sha", () => {
         const github = {
           pullRequests: {
-            getReviews: jest
+            listReviews: jest
               .fn()
               .mockReturnValue(
                 Promise.resolve(payload["reviews"]["filtered_by"]["sha"])
@@ -150,7 +150,7 @@ describe("PRTriage", () => {
       describe("and filtered by state", () => {
         const github = {
           pullRequests: {
-            getReviews: jest
+            listReviews: jest
               .fn()
               .mockReturnValue(
                 Promise.resolve(payload["reviews"]["filtered_by"]["state"])
@@ -174,7 +174,7 @@ describe("PRTriage", () => {
       describe("and filtered by date", () => {
         const github = {
           pullRequests: {
-            getReviews: jest
+            listReviews: jest
               .fn()
               .mockReturnValue(
                 Promise.resolve(payload["reviews"]["filtered_by"]["date"])
@@ -199,7 +199,7 @@ describe("PRTriage", () => {
     describe("when there are NO reviews", () => {
       const github = {
         pullRequests: {
-          getReviews: jest.fn().mockReturnValue(Promise.resolve({}))
+          listReviews: jest.fn().mockReturnValue(Promise.resolve({}))
         }
       };
       const klass = new PRTriage(github, { owner, repo });
