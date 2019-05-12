@@ -17,9 +17,6 @@
     "commitmsg": "validate-commit-msg",
     "semantic-release": "semantic-release"
   },
-  "engines": {
-    "node": ">= 8"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sotayamashita/sidekick.git"
