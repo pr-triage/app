@@ -34,6 +34,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "debug": "^4.1.1",
+    "dotenv": "^8.0.0",
     "probot": "^9.2.10"
   },
   "devDependencies": {
