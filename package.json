@@ -4,7 +4,7 @@
   "description": "GitHub App built with Probot that support pull request workflow",
   "main": "index.js",
   "scripts": {
-    "now-build": "DEBUG=probot* probot run ./index.js",
+    "start": "DEBUG=probot* probot run ./index.js",
     "start:dev": "nodemon --exec \"npm start\"",
     "commit": "git-cz",
     "lint": "prettier --write {index,lib/**/*,test/pr-triage.test}.js",
