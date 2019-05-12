@@ -83,7 +83,7 @@ We'd also love PRs. If you're thinking of a large PR, we advise opening up an is
 7.  Download the private key and move it under the repository:
 
     ```bash
-    $ mv /path/to/private-key.pem /path/to/pr-triage/   
+    $ mv /path/to/private-key.pem /path/to/pr-triage/
     ```
 
 8.  Edit .env with:
