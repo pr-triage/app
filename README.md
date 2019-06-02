@@ -1,5 +1,5 @@
-[build badge]: https://travis-ci.com/pr-triage/app.svg?branch=master
-[build url]:   https://travis-ci.com/pr-triage/app
+[build badge]: https://circleci.com/gh/pr-triage/app/tree/master.svg?style=svg
+[build url]:   https://circleci.com/gh/pr-triage/app/tree/master
 
 [dep badge]:   https://api.dependabot.com/badges/status?host=github&repo=pr-triage/app
 [dep url]:     https://dependabot.com
