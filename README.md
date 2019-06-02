@@ -106,3 +106,4 @@ PRTriage © [Sam Yamashita](https://twitter.com/sota0805). Released under the [A
 Authored and maintained by [Sam Yamashita](https://twitter.com/sota0805) with help from [contributors](https://github.com/pr-triage/app/contributors).
 
 [Privacy Policy](https://github.com/pr-triage/policies/blob/master/PRIVACY.md)・[Security Policy](https://github.com/pr-triage/policies/blob/master/SECURITY.md)
+
