@@ -14,6 +14,7 @@ function probotPlugin(robot) {
     "pull_request.edited",
     "pull_request.synchronize",
     "pull_request.reopened",
+    "pull_request.ready_for_review",
     "pull_request_review.submitted",
     "pull_request_review.dismissed"
   ];

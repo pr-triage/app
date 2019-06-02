@@ -14,7 +14,8 @@ describe("PRTriage", () => {
       UNREVIED: expect.any(String),
       APPROVED: expect.any(String),
       CHANGES_REQUESTED: expect.any(String),
-      MERGED: expect.any(String)
+      MERGED: expect.any(String),
+      DRAFT: expect.any(String)
     });
   }); // static STATE
 
@@ -32,6 +33,18 @@ describe("PRTriage", () => {
    * _getState
    */
   describe("_getState", () => {
+    describe("when pull request is draft", () => {
+      const klass = new PRTriage({}, { owner, repo });
+      const subject = () => klass._getState();
+
+      test("should be STATE.DRAFT", async () => {
+	klass.pullRequest =
+	  payload["pull_request"]["with"]["draft"]["data"];
+	const result = await subject();
+	expect(result).toEqual(PRTriage.STATE.DRAFT)
+      });
+    });
+
     describe("when pull request title include WIP regex", () => {
       const klass = new PRTriage({}, { owner, repo });
       const subject = () => klass._getState();
@@ -220,7 +233,7 @@ describe("PRTriage", () => {
   describe("_ensurePRTriageLabelExists", () => {
     const klass = new PRTriage({}, { owner, repo });
     klass._createLabel = jest.fn().mockReturnValue(Promise.resolve({}));
-    const n = 4;
+    const n = 5;
 
     test(`createLabel() should be called ${n} times`, async () => {
       await klass._ensurePRTriageLabelExists();

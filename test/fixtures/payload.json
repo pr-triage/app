@@ -1,6 +1,12 @@
 {
   "pull_request": {
     "with": {
+      "draft": {
+	"data": {
+	  "title": "Draft pull request",
+	  "draft": true
+	}
+      },
       "wip_title": {
         "data": {
           "title": "WIP: pull request is work in progress"
