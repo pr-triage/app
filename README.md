@@ -14,7 +14,6 @@
 
 > GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
 
-
 ## Motivation
 
 Firstly, I started to create PRTriage to solve my own pain. As an engineer, I spent my time to ask colleagues Pull Requests status such as `WIP (work in progress)`・`DRAFT`・`UNREVIEWED`・`CHANGES_REQUESTED`・`APPROVED`・`MERGED`. Most of the developers use [GitHub](https://github.com) and follow [GitHub Flow](https://guides.github.com/introduction/flow/)/[Git Flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html). Most of them say that the time it takes to know pull request status is getting increasing as the team is large so I published it as Open Source :sparkles:.
