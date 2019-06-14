@@ -93,6 +93,8 @@ Example users include the following GitHub organizations:
 
 [<img align="left" src="https://avatars3.githubusercontent.com/u/10746780?s=60&v=4" alt="Redash" title="Redash"  space="5"/>](https://github.com/getredash)
 
+[<img align="left" src="https://avatars1.githubusercontent.com/u/12101536?s=60&v=4" alt="AntDesign" title="AntDesign"  space="5"/>](https://github.com/ant-design)
+
 <br/><br/>
 
 ## Contributing
