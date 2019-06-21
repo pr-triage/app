@@ -45,6 +45,17 @@ describe("PRTriage", () => {
       });
     });
 
+    describe("when pull request is draft and title matches WIP regex", () => {
+      const klass = new PRTriage({}, { owner, repo });
+      const subject = () => klass._getState();
+
+      test("should be STATE.DRAFT", async () => {
+        klass.pullRequest = payload["pull_request"]["with"]["draft_and_wip_title"]["data"];
+        const result = await subject();
+        expect(result).toEqual(PRTriage.STATE.DRAFT)
+      })
+    })
+
     describe("when pull request title include WIP regex", () => {
       const klass = new PRTriage({}, { owner, repo });
       const subject = () => klass._getState();
