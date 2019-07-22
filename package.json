@@ -15,7 +15,9 @@
     "precommit": "npm test && lint-staged",
     "prepush": "npm test",
     "commitmsg": "validate-commit-msg",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -35,7 +37,8 @@
   "dependencies": {
     "debug": "^4.1.1",
     "dotenv": "^8.0.0",
-    "probot": "^9.2.10"
+    "probot": "^9.2.10",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "codecov": "^3.4.0",
@@ -63,5 +66,6 @@
       "prettier --write {index,lib/**/*,test/pr-triage.test}.js",
       "git add"
     ]
-  }
+  },
+  "snyk": true
 }
