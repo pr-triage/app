@@ -93,7 +93,12 @@ Example users include the following GitHub organizations:
 
 [<img align="left" src="https://avatars3.githubusercontent.com/u/10746780?s=60&v=4" alt="Redash" title="Redash"  space="5"/>](https://github.com/getredash)
 
+[<img align="left" src="https://avatars1.githubusercontent.com/u/12101536?s=60&v=4" alt="Redash" title="Ant design"  space="5"/>](https://github.com/ant-design)
+
 <br/><br/>
+
+> If your company or products use PRTriage, and you'd like to be added to this growing list, click [here](https://github.com/pr-triage/app/issues/190) to leave us a message.
+
 
 ## Contributing
 
