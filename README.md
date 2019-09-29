@@ -1,6 +1,3 @@
-[build badge]: https://circleci.com/gh/pr-triage/app/tree/master.svg?style=svg
-[build url]:   https://circleci.com/gh/pr-triage/app/tree/master
-
 [dep badge]:   https://api.dependabot.com/badges/status?host=github&repo=pr-triage/app
 [dep url]:     https://dependabot.com
 
@@ -10,10 +7,9 @@
 [vulnerabilities badge]: https://snyk.io/test/github/pr-triage/app/badge.svg?targetFile=package.json
 [vulnerabilities url]:   https://snyk.io/test/github/pr-triage/app?targetFile=package.json
 
-# PRTriage [![build status][build badge]][build url] [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
+# PRTriage [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
 
 > GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
-
 
 ## Motivation
 
