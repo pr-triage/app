@@ -8,6 +8,7 @@
 [vulnerabilities url]:   https://snyk.io/test/github/pr-triage/app?targetFile=package.json
 
 # PRTriage [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpr-triage%2Fapp.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpr-triage%2Fapp?ref=badge_shield)
 
 > GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
 
@@ -107,3 +108,6 @@ PRTriage © [Sam Yamashita](https://twitter.com/sota0805). Released under the [A
 Authored and maintained by [Sam Yamashita](https://twitter.com/sota0805) with help from [contributors](https://github.com/pr-triage/app/contributors).
 
 [Privacy Policy](https://github.com/pr-triage/policies/blob/master/PRIVACY.md)・[Security Policy](https://github.com/pr-triage/policies/blob/master/SECURITY.md)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpr-triage%2Fapp.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpr-triage%2Fapp?ref=badge_large)
