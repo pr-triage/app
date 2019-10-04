@@ -7,8 +7,10 @@
 [vulnerabilities badge]: https://snyk.io/test/github/pr-triage/app/badge.svg?targetFile=package.json
 [vulnerabilities url]:   https://snyk.io/test/github/pr-triage/app?targetFile=package.json
 
-# PRTriage [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url]
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpr-triage%2Fapp.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpr-triage%2Fapp?ref=badge_shield)
+[license management badge]: https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpr-triage%2Fapp.svg?type=shield
+[license management url]:   https://app.fossa.io/projects/git%2Bgithub.com%2Fpr-triage%2Fapp?ref=badge_shield
+
+# PRTriage [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url] [![licence management status][license management badge]][license management url]
 
 > GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
 
