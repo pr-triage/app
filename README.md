@@ -109,7 +109,6 @@ Please read [Contributing Guide](CONTRIBUTING.md) for details on our code of con
 PRTriage © [Sam Yamashita](https://twitter.com/sota0805). Released under the [Apache 2.0](LICENSE)<br/>
 Authored and maintained by [Sam Yamashita](https://twitter.com/sota0805) with help from [contributors](https://github.com/pr-triage/app/contributors).
 
-[Privacy Policy](https://github.com/pr-triage/policies/blob/master/PRIVACY.md)・[Security Policy](https://github.com/pr-triage/policies/blob/master/SECURITY.md)
-
-
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpr-triage%2Fapp.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpr-triage%2Fapp?ref=badge_large)
+
+[Privacy Policy](https://github.com/pr-triage/policies/blob/master/PRIVACY.md)・[Security Policy](https://github.com/pr-triage/policies/blob/master/SECURITY.md)
