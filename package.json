@@ -38,7 +38,7 @@
     "debug": "^4.1.1",
     "dotenv": "^8.0.0",
     "probot": "^9.2.10",
-    "snyk": "^1.189.0"
+    "snyk": "^1.231.0"
   },
   "devDependencies": {
     "codecov": "^3.4.0",
