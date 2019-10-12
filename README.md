@@ -96,6 +96,7 @@ Example users include the following GitHub organizations:
 
 [<img align="left" src="https://avatars3.githubusercontent.com/u/21287010?s=60&v=4" alt="Autify" title="Autify"  space="5"/>](https://github.com/autifyhq)
 
+<br/><br/>
 
 ## Contributing
 
