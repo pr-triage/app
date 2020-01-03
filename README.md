@@ -14,7 +14,7 @@
 
 # [PRTriage][prtriage] &middot; [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url] [![licence management status][license management badge]][license management url]
 
-GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
+> GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
 
 
 ## Motivation
