@@ -1,3 +1,5 @@
+[prtriage]: https://github.com/apps/pr-triage
+
 [dep badge]:   https://api.dependabot.com/badges/status?host=github&repo=pr-triage/app
 [dep url]:     https://dependabot.com
 
@@ -10,22 +12,25 @@
 [license management badge]: https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpr-triage%2Fapp.svg?type=shield
 [license management url]:   https://app.fossa.io/projects/git%2Bgithub.com%2Fpr-triage%2Fapp?ref=badge_shield
 
-# PRTriage [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url] [![licence management status][license management badge]][license management url]
+# [PRTriage][prtriage] &middot; [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url] [![licence management status][license management badge]][license management url]
 
-> GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
+GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
+
 
 ## Motivation
 
 Firstly, I started to create PRTriage to solve my own pain. As an engineer, I spent my time to ask colleagues Pull Requests status such as `WIP (work in progress)`・`DRAFT`・`UNREVIEWED`・`CHANGES_REQUESTED`・`APPROVED`・`MERGED`. Most of the developers use [GitHub](https://github.com) and follow [GitHub Flow](https://guides.github.com/introduction/flow/)/[Git Flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html). Most of them say that the time it takes to know pull request status is getting increasing as the team is large so I published it as Open Source :sparkles:.
 
-## Installation
 
-Please follow the below steps to install quickly :rocket::
+## Installation
 
 1. Go to [PRTriage App top page](https://probot.github.io/apps/pr-triage/)
 1. Click **"+ Add to GitHub"** button
 1. Choose a repository
 1. That's it :sparkles:
+
+[Learn how to install it for GitHub Enterprise](https://github.com/pr-triage/app/wiki#installation-for-github-enterprise).
+
 
 ## How it works
 
@@ -43,44 +48,7 @@ Only watching the most recent commit :eyes::
 - Add the `PR: merged` label when the PR has merged.
 
 
-## Installation for GitHub Enterprise
-
-Please follow the steps to install for GitHub Enterprise :rocket::
-
-1. Clone the repository:
-   ```bash
-   git clone git@github.com:pr-triage/app.git && cd app
-   ```
-1. Install the dependencies:
-   ```bash
-   npm install
-   ```
-1. Copy `.env.example` to `.env`:
-   ```bash
-   cp .env.example .env
-   ```
-1. Go to GitHub Enterprise URL. E.g. `fake.github-enterprise.com`
-1. Go to `fake.github-enterprise.com/settings/apps/new` to create a new GitHub App.
-1. Fill in following items on GitHub App configuration page:
-   - GitHub App name
-     - Input [whatever you want]
-   - Homepage URL
-     - Input [whatever you want]
-   - Webhook URL
-     - Input [Webhook URL which is depend on your deployment environement]
-   - Permissions
-     - Pull request
-       - Select From List By [Access: Read & Write]
-   - Subscribe to events
-     - Select Checkbox [Pull request]
-     - Select Checkbox [Pull request review]
-1. Download the private key and move it to your project's directory.
-1. Deploy the app to Glitch, Heroku or Now.
-    - [Read more about how to deploy app](https://probot.github.io/docs/deployment/)
-1. Edit `.env` and set `APP_ID` to the ID
-1. Edit the your GitHub App configuration page and set `Webhook URL` to the URL depending on your deployment environment.
-
-## Who use PRTriage?
+## Trusted by
 
 Example users include the following GitHub organizations:
 
@@ -98,9 +66,16 @@ Example users include the following GitHub organizations:
 
 <br/><br/>
 
+
 ## Contributing
 
-Please read [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+### [Code of Conduct](CODE_OF_CONDUCT.md)
+
+It has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+
+### [Contributing Guide](CONTRIBUTING.md)
+
+Read our [contributing guide](CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React.
 
 
 ## License
