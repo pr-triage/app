@@ -52,7 +52,7 @@
     "prettier": "1.19.1",
     "probot-config": "^1.0.0",
     "raven": "^2.6.3",
-    "semantic-release": "^15.13.15",
+    "semantic-release": "^17.0.2",
     "smee-client": "^1.1.0",
     "validate-commit-msg": "^2.14.0"
   },
