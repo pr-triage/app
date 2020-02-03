@@ -47,7 +47,7 @@
     "husky": "^4.0.1",
     "jest": "^24.0.0",
     "jsonwebtoken": "^8.5.1",
-    "lint-staged": "^9.0.2",
+    "lint-staged": "^10.0.7",
     "nodemon": "^2.0.1",
     "prettier": "1.19.1",
     "probot-config": "^1.0.0",
