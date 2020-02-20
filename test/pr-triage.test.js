@@ -14,6 +14,7 @@ describe("PRTriage", () => {
       UNREVIED: expect.any(String),
       APPROVED: expect.any(String),
       CHANGES_REQUESTED: expect.any(String),
+      PARTIALLY_APPROVED: expect.any(String),
       MERGED: expect.any(String),
       DRAFT: expect.any(String)
     });
@@ -38,10 +39,9 @@ describe("PRTriage", () => {
       const subject = () => klass._getState();
 
       test("should be STATE.DRAFT", async () => {
-	klass.pullRequest =
-	  payload["pull_request"]["with"]["draft"]["data"];
-	const result = await subject();
-	expect(result).toEqual(PRTriage.STATE.DRAFT)
+        klass.pullRequest = payload["pull_request"]["with"]["draft"]["data"];
+        const result = await subject();
+        expect(result).toEqual(PRTriage.STATE.DRAFT);
       });
     });
 
@@ -50,11 +50,12 @@ describe("PRTriage", () => {
       const subject = () => klass._getState();
 
       test("should be STATE.DRAFT", async () => {
-        klass.pullRequest = payload["pull_request"]["with"]["draft_and_wip_title"]["data"];
+        klass.pullRequest =
+          payload["pull_request"]["with"]["draft_and_wip_title"]["data"];
         const result = await subject();
-        expect(result).toEqual(PRTriage.STATE.DRAFT)
-      })
-    })
+        expect(result).toEqual(PRTriage.STATE.DRAFT);
+      });
+    });
 
     describe("when pull request title include WIP regex", () => {
       const klass = new PRTriage({}, { owner, repo });
@@ -81,8 +82,20 @@ describe("PRTriage", () => {
 
     describe("when there are NO reviews", () => {
       const github = {
-        pullRequests: {
-          listReviews: jest.fn().mockReturnValue(Promise.resolve({}))
+        pulls: {
+          listReviews: jest.fn().mockReturnValue(Promise.resolve({})),
+          listReviewRequests: jest
+              .fn()
+              .mockReturnValue(
+                  Promise.resolve(payload["review_requests"]["none"])
+              )
+        },
+        repos: {
+          getBranchProtection: jest
+              .fn()
+              .mockReturnValue(
+                  Promise.resolve(payload["branch_protection"]["none"])
+              )
         }
       };
       const klass = new PRTriage(github, { owner, repo });
@@ -98,13 +111,25 @@ describe("PRTriage", () => {
 
     describe("when number of CHANGES_REQUESTED is more than 0", () => {
       const github = {
-        pullRequests: {
+        pulls: {
           listReviews: jest
             .fn()
             .mockReturnValue(
               Promise.resolve(
                 payload["reviews"]["should_be"]["chnages_requested"]
               )
+            ),
+          listReviewRequests: jest
+            .fn()
+            .mockReturnValue(
+              Promise.resolve(payload["review_requests"]["none"])
+            )
+        },
+        repos: {
+          getBranchProtection: jest
+            .fn()
+            .mockReturnValue(
+              Promise.resolve(payload["branch_protection"]["none"])
             )
         }
       };
@@ -121,12 +146,24 @@ describe("PRTriage", () => {
 
     describe("when number of reviews and approved reviews are same", () => {
       const github = {
-        pullRequests: {
+        pulls: {
           listReviews: jest
-            .fn()
-            .mockReturnValue(
-              Promise.resolve(payload["reviews"]["should_be"]["approve"])
-            )
+              .fn()
+              .mockReturnValue(
+                  Promise.resolve(payload["reviews"]["should_be"]["approve"])
+              ),
+          listReviewRequests: jest
+              .fn()
+              .mockReturnValue(
+                  Promise.resolve(payload["review_requests"]["none"])
+              )
+        },
+        repos: {
+          getBranchProtection: jest
+              .fn()
+              .mockReturnValue(
+                  Promise.resolve(payload["branch_protection"]["none"])
+              )
         }
       };
       const klass = new PRTriage(github, { owner, repo });
@@ -134,12 +171,208 @@ describe("PRTriage", () => {
 
       test("should be STATE.APPROVE", async () => {
         klass.pullRequest =
-          payload["pull_request"]["with"]["unreviewed_label"]["data"];
+            payload["pull_request"]["with"]["unreviewed_label"]["data"];
         const result = await subject();
         expect(result).toEqual(PRTriage.STATE.APPROVED);
       });
     });
+
+    describe("when number of requested reviews is more than 0", () => {
+      const github = {
+        pulls: {
+          listReviews: jest
+            .fn()
+            .mockReturnValue(
+              Promise.resolve(payload["reviews"]["should_be"]["approve"])
+            ),
+          listReviewRequests: jest
+            .fn()
+            .mockReturnValue(
+              Promise.resolve(payload["review_requests"]["one_user"])
+            )
+        },
+        repos: {
+          getBranchProtection: jest
+            .fn()
+            .mockReturnValue(
+              Promise.resolve(payload["branch_protection"]["none"])
+            )
+        }
+      };
+      const klass = new PRTriage(github, { owner, repo });
+      const subject = () => klass._getState();
+
+      test("should be STATE.PARTIALLY_APPROVED", async () => {
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        const result = await subject();
+        expect(result).toEqual(PRTriage.STATE.PARTIALLY_APPROVED);
+      });
+    });
+
+    describe("when number of approved reviews is less than the number of required reviews", () => {
+      const github = {
+        pulls: {
+          listReviews: jest
+              .fn()
+              .mockReturnValue(
+                  Promise.resolve(payload["reviews"]["should_be"]["approve"])
+              ),
+          listReviewRequests: jest
+              .fn()
+              .mockReturnValue(
+                  Promise.resolve(payload["review_requests"]["none"])
+              )
+        },
+        repos: {
+          getBranchProtection: jest
+              .fn()
+              .mockReturnValue(
+                  Promise.resolve(payload["branch_protection"]["required_three"])
+              )
+        }
+      };
+      const klass = new PRTriage(github, { owner, repo });
+      const subject = () => klass._getState();
+
+      test("should be STATE.PARTIALLY_APPROVED", async () => {
+        klass.pullRequest =
+            payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        const result = await subject();
+        expect(result).toEqual(PRTriage.STATE.PARTIALLY_APPROVED);
+      });
+    });
   }); // _getState
+
+  describe("_getRequiredNumberOfReviews", () => {
+    describe("when there is no branch protections", () => {
+      const github = {
+        repos: {
+          getBranchProtection: jest
+            .fn()
+            .mockReturnValue(
+              Promise.resolve(payload["branch_protection"]["none"])
+            )
+        }
+      };
+      const klass = new PRTriage(github, { owner, repo });
+      const subject = () => klass._getRequiredNumberOfReviews();
+
+      test("should be return a default of 1", async () => {
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        const result = await subject();
+        expect(result).toEqual(1);
+      });
+    });
+
+    describe("when there is a branch protection for the branch", () => {
+      const github = {
+        repos: {
+          getBranchProtection: jest
+            .fn()
+            .mockReturnValue(
+              Promise.resolve(payload["branch_protection"]["required_three"])
+            )
+        }
+      };
+      const klass = new PRTriage(github, { owner, repo });
+      const subject = () => klass._getRequiredNumberOfReviews();
+
+      test("should return the `required_approving_review_count`", async () => {
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        const result = await subject();
+        expect(result).toEqual(3);
+      });
+    });
+  });
+
+  describe("_getRequestedNumberOfReviews", () => {
+    describe("when there is no remaining review requests", () => {
+      const github = {
+        pulls: {
+          listReviewRequests: jest
+              .fn()
+              .mockReturnValue(
+                  Promise.resolve(payload["review_requests"]["none"])
+              )
+        }
+      };
+      const klass = new PRTriage(github, { owner, repo });
+      const subject = () => klass._getRequestedNumberOfReviews();
+
+      test("should be return 0", async () => {
+        klass.pullRequest =
+          payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        const result = await subject();
+        expect(result).toEqual(0);
+      });
+    });
+
+    describe("when there is 1 remaining review TEAM requests", () => {
+      const github = {
+        pulls: {
+          listReviewRequests: jest
+              .fn()
+              .mockReturnValue(
+                  Promise.resolve(payload["review_requests"]["one_team"])
+              )
+        }
+      };
+      const klass = new PRTriage(github, { owner, repo });
+      const subject = () => klass._getRequestedNumberOfReviews();
+
+      test("should be return 0", async () => {
+        klass.pullRequest =
+            payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        const result = await subject();
+        expect(result).toEqual(1);
+      });
+    });
+
+    describe("when there is 1 remaining review USER requests", () => {
+      const github = {
+        pulls: {
+          listReviewRequests: jest
+              .fn()
+              .mockReturnValue(
+                  Promise.resolve(payload["review_requests"]["one_user"])
+              )
+        }
+      };
+      const klass = new PRTriage(github, { owner, repo });
+      const subject = () => klass._getRequestedNumberOfReviews();
+
+      test("should be return 0", async () => {
+        klass.pullRequest =
+            payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        const result = await subject();
+        expect(result).toEqual(1);
+      });
+    });
+
+    describe("when there is 1 remaining review TEAM and USER requests", () => {
+      const github = {
+        pulls: {
+          listReviewRequests: jest
+              .fn()
+              .mockReturnValue(
+                  Promise.resolve(payload["review_requests"]["one_of_each"])
+              )
+        }
+      };
+      const klass = new PRTriage(github, { owner, repo });
+      const subject = () => klass._getRequestedNumberOfReviews();
+
+      test("should be return 0", async () => {
+        klass.pullRequest =
+            payload["pull_request"]["with"]["unreviewed_label"]["data"];
+        const result = await subject();
+        expect(result).toEqual(2);
+      });
+    });
+  });
 
   /**
    * _getUniqueReviews
@@ -148,7 +381,7 @@ describe("PRTriage", () => {
     describe("when there are reviews", () => {
       describe("and filtered by sha", () => {
         const github = {
-          pullRequests: {
+          pulls: {
             listReviews: jest
               .fn()
               .mockReturnValue(
@@ -173,7 +406,7 @@ describe("PRTriage", () => {
 
       describe("and filtered by state", () => {
         const github = {
-          pullRequests: {
+          pulls: {
             listReviews: jest
               .fn()
               .mockReturnValue(
@@ -197,7 +430,7 @@ describe("PRTriage", () => {
 
       describe("and filtered by date", () => {
         const github = {
-          pullRequests: {
+          pulls: {
             listReviews: jest
               .fn()
               .mockReturnValue(
@@ -222,7 +455,7 @@ describe("PRTriage", () => {
 
     describe("when there are NO reviews", () => {
       const github = {
-        pullRequests: {
+        pulls: {
           listReviews: jest.fn().mockReturnValue(Promise.resolve({}))
         }
       };
@@ -244,7 +477,7 @@ describe("PRTriage", () => {
   describe("_ensurePRTriageLabelExists", () => {
     const klass = new PRTriage({}, { owner, repo });
     klass._createLabel = jest.fn().mockReturnValue(Promise.resolve({}));
-    const n = 5;
+    const n = 6;
 
     test(`createLabel() should be called ${n} times`, async () => {
       await klass._ensurePRTriageLabelExists();
