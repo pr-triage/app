@@ -1,5 +1,3 @@
-test
-
 [prtriage]: https://github.com/apps/pr-triage
 
 [dep badge]:   https://api.dependabot.com/badges/status?host=github&repo=pr-triage/app
