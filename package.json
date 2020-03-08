@@ -12,9 +12,6 @@
     "test:watch": "jest --watch --notify --notifyMode=change --coverage",
     "coverage": "npm test  -- --coverage",
     "postcoverage": "codecov",
-    "precommit": "npm test && lint-staged",
-    "prepush": "npm test",
-    "commitmsg": "validate-commit-msg",
     "semantic-release": "semantic-release",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"
@@ -47,7 +44,7 @@
     "husky": "^4.0.1",
     "jest": "^25.1.0",
     "jsonwebtoken": "^8.5.1",
-    "lint-staged": "^9.0.2",
+    "lint-staged": "^10.0.7",
     "nodemon": "^2.0.1",
     "prettier": "1.19.1",
     "probot-config": "^1.0.0",
@@ -67,5 +64,12 @@
       "git add"
     ]
   },
-  "snyk": true
+  "snyk": true,
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": "npm test && lint-staged",
+      "pre-push": "npm test"
+    }
+  }
 }
