@@ -11,6 +11,8 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
+      - store_artifacts:
+          path: coverage
 
 workflows:
     build-and-test:
