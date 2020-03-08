@@ -81,7 +81,7 @@ describe("PRTriage", () => {
 
     describe("when there are NO reviews", () => {
       const github = {
-        pullRequests: {
+        pulls: {
           listReviews: jest.fn().mockReturnValue(Promise.resolve({}))
         }
       };
@@ -98,7 +98,7 @@ describe("PRTriage", () => {
 
     describe("when number of CHANGES_REQUESTED is more than 0", () => {
       const github = {
-        pullRequests: {
+        pulls: {
           listReviews: jest
             .fn()
             .mockReturnValue(
@@ -121,7 +121,7 @@ describe("PRTriage", () => {
 
     describe("when number of reviews and approved reviews are same", () => {
       const github = {
-        pullRequests: {
+        pulls: {
           listReviews: jest
             .fn()
             .mockReturnValue(
@@ -148,7 +148,7 @@ describe("PRTriage", () => {
     describe("when there are reviews", () => {
       describe("and filtered by sha", () => {
         const github = {
-          pullRequests: {
+          pulls: {
             listReviews: jest
               .fn()
               .mockReturnValue(
@@ -173,7 +173,7 @@ describe("PRTriage", () => {
 
       describe("and filtered by state", () => {
         const github = {
-          pullRequests: {
+          pulls: {
             listReviews: jest
               .fn()
               .mockReturnValue(
@@ -197,7 +197,7 @@ describe("PRTriage", () => {
 
       describe("and filtered by date", () => {
         const github = {
-          pullRequests: {
+          pulls: {
             listReviews: jest
               .fn()
               .mockReturnValue(
@@ -222,7 +222,7 @@ describe("PRTriage", () => {
 
     describe("when there are NO reviews", () => {
       const github = {
-        pullRequests: {
+        pulls: {
           listReviews: jest.fn().mockReturnValue(Promise.resolve({}))
         }
       };
