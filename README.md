@@ -62,6 +62,8 @@ Example users include the following GitHub organizations:
 
 [<img align="left" src="https://avatars1.githubusercontent.com/u/12101536?s=60&v=4" alt="And design" title="Ant design"  space="5"/>](https://github.com/ant-design)
 
+[<img align="left" src="https://avatars3.githubusercontent.com/u/686511?s=60&v=4" alt="Wix" title="Wix"  space="5"/>](https://github.com/wix)
+
 [<img align="left" src="https://avatars3.githubusercontent.com/u/21287010?s=60&v=4" alt="Autify" title="Autify"  space="5"/>](https://github.com/autifyhq)
 
 <br/><br/>
