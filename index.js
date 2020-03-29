@@ -1,11 +1,12 @@
 const debug = require("debug")("probot:pr-triage");
-const Raven = require("raven");
+const Sentry = require("@sentry/node");
 const PRTriage = require("./lib/pr-triage");
 
-Raven.config(
-  process.env.NODE_ENV === "production" &&
-    "https://dce36edab6334112b02122e07b2bc549@sentry.io/1222067"
-).install();
+if (process.env.NODE_ENV === "production") {
+  Sentry.init({
+    dsn: "https://dce36edab6334112b02122e07b2bc549@sentry.io/1222067"
+  });
+}
 
 function probotPlugin(robot) {
   const events = [
@@ -26,16 +27,14 @@ async function triage(context) {
   const prTriage = forRepository(context);
   const pullRequest = getPullRequest(context);
 
-  Raven.context(() => {
-    Raven.setContext({
-      extra: {
-        owner: context.repo()["owner"],
-        repo: context.repo()["repo"],
-        number: pullRequest.number
-      }
+  try {
+    Sentry.configureScope(scope => {
+      scope.setExtra("pull_request_url", pullRequest.url);
     });
     prTriage.triage(pullRequest);
-  });
+  } catch (e) {
+    Sentry.captureMessage(e);
+  }
 }
 
 function forRepository(context) {

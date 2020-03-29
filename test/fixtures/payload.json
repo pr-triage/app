@@ -36,6 +36,9 @@
           "state": "open",
           "head": {
             "sha": "head"
+          },
+          "base": {
+            "ref": "master"
           }
         }
       },
@@ -64,94 +67,168 @@
   "reviews": {
     "should_be": {
       "chnages_requested": {
-        "data": [{
-          "id": 1,
-          "user": { "id": 1 },
-          "state": "CHANGES_REQUESTED",
-          "submitted_at": "2018-01-06T08:28:10Z",
-          "commit_id": "head"
-        }, {
-          "id": 1,
-          "user": { "id": 2 },
-          "state": "CHANGES_REQUESTED",
-          "submitted_at": "2018-01-06T08:28:10Z",
-          "commit_id": "head"
-        }, {
-          "id": 2,
-          "user": { "id": 3 },
-          "state": "APPROVED",
-          "submitted_at": "2018-01-06T08:28:10Z",
-          "commit_id": "behind"
-        }]
+        "data": [
+          {
+            "id": 1,
+            "user": { "id": 1 },
+            "state": "CHANGES_REQUESTED",
+            "submitted_at": "2018-01-06T08:28:10Z",
+            "commit_id": "head"
+          },
+          {
+            "id": 1,
+            "user": { "id": 2 },
+            "state": "CHANGES_REQUESTED",
+            "submitted_at": "2018-01-06T08:28:10Z",
+            "commit_id": "head"
+          },
+          {
+            "id": 2,
+            "user": { "id": 3 },
+            "state": "APPROVED",
+            "submitted_at": "2018-01-06T08:28:10Z",
+            "commit_id": "behind"
+          }
+        ]
       },
       "approve": {
-        "data": [{
-          "id": 1,
-          "user": { "id": 1 },
-          "state": "APPROVED",
-          "submitted_at": "2018-01-06T08:28:10Z",
-          "commit_id": "head"
-        }, {
-          "id": 1,
-          "user": { "id": 2 },
-          "state": "APPROVED",
-          "submitted_at": "2018-01-06T08:28:10Z",
-          "commit_id": "head"
-        }]
+        "data": [
+          {
+            "id": 1,
+            "user": { "id": 1 },
+            "state": "APPROVED",
+            "submitted_at": "2018-01-06T08:28:10Z",
+            "commit_id": "head"
+          },
+          {
+            "id": 1,
+            "user": { "id": 2 },
+            "state": "APPROVED",
+            "submitted_at": "2018-01-06T08:28:10Z",
+            "commit_id": "head"
+          }
+        ]
       }
     },
     "filtered_by": {
       "sha": {
-        "data": [{
-          "id": 1,
-          "user": { "id": 1 },
-          "state": "CHANGES_REQUESTED",
-          "submitted_at": "2018-01-06T08:28:10Z",
-          "commit_id": "head"
-        }, {
-          "id": 1,
-          "user": { "id": 2 },
-          "state": "CHANGES_REQUESTED",
-          "submitted_at": "2018-01-06T08:28:10Z",
-          "commit_id": "head"
-        }, {
-          "id": 2,
-          "user": { "id": 3 },
-          "state": "APPROVED",
-          "submitted_at": "2018-01-06T08:28:10Z",
-          "commit_id": "behind"
-        }]
+        "data": [
+          {
+            "id": 1,
+            "user": { "id": 1 },
+            "state": "CHANGES_REQUESTED",
+            "submitted_at": "2018-01-06T08:28:10Z",
+            "commit_id": "head"
+          },
+          {
+            "id": 1,
+            "user": { "id": 2 },
+            "state": "CHANGES_REQUESTED",
+            "submitted_at": "2018-01-06T08:28:10Z",
+            "commit_id": "head"
+          },
+          {
+            "id": 2,
+            "user": { "id": 3 },
+            "state": "APPROVED",
+            "submitted_at": "2018-01-06T08:28:10Z",
+            "commit_id": "behind"
+          }
+        ]
       },
       "state": {
-        "data": [{
-          "id": 1,
-          "user": { "id": 1 },
-          "state": "COMMENTED",
-          "submitted_at": "2018-01-06T08:28:10Z",
-          "commit_id": "head"
-        }, {
-          "id": 2,
-          "user": { "id": 2 },
-          "state": "APPROVED",
-          "submitted_at": "2018-01-06T08:28:10Z",
-          "commit_id": "head"
-        }]
+        "data": [
+          {
+            "id": 1,
+            "user": { "id": 1 },
+            "state": "COMMENTED",
+            "submitted_at": "2018-01-06T08:28:10Z",
+            "commit_id": "head"
+          },
+          {
+            "id": 2,
+            "user": { "id": 2 },
+            "state": "APPROVED",
+            "submitted_at": "2018-01-06T08:28:10Z",
+            "commit_id": "head"
+          }
+        ]
       },
       "date": {
-        "data": [{
-          "id": 1,
-          "user": { "id": 1 },
-          "state": "CHANGES_REQUESTED",
-          "submitted_at": "1970-01-01T00:00:00Z",
-          "commit_id": "head"
-        }, {
-          "id": 1,
-          "user": { "id": 1 },
-          "state": "APPROVED",
-          "submitted_at": "2020-07-24T00:00:00Z",
-          "commit_id": "head"
-        }]
+        "data": [
+          {
+            "id": 1,
+            "user": { "id": 1 },
+            "state": "CHANGES_REQUESTED",
+            "submitted_at": "1970-01-01T00:00:00Z",
+            "commit_id": "head"
+          },
+          {
+            "id": 1,
+            "user": { "id": 1 },
+            "state": "APPROVED",
+            "submitted_at": "2020-07-24T00:00:00Z",
+            "commit_id": "head"
+          }
+        ]
       }
+    }
+  },
+  "review_requests": {
+    "one_of_each": {
+      "data": {
+        "teams": [
+          {
+            "id": 1
+          }
+        ],
+        "users": [
+          {
+            "id": 2
+          }
+        ]
+      }
+    },
+    "one_user": {
+      "data": {
+        "teams": [],
+        "users": [
+          {
+            "id": 2
+          }
+        ]
+      }
+    },
+    "one_team": {
+      "data": {
+        "teams": [
+          {
+            "id": 1
+          }
+        ],
+        "users": []
+      }
+    },
+    "none": {
+      "data": {
+        "teams": [],
+        "users": []
+      }
+    }
+  },
+  "branch_protection": {
+    "required_three": {
+      "data": {
+        "required_pull_request_reviews": {
+          "required_approving_review_count": 3
+        }
+      }
+    },
+    "not_defined": {
+      "status": 404
+    },
+    "not_allowed": {
+      "status": 403
     }
   }
 }
