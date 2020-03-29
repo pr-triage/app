@@ -4,7 +4,7 @@
   "description": "GitHub App built with Probot that support pull request workflow",
   "main": "index.js",
   "scripts": {
-    "start": "DEBUG=probot* probot run ./index.js",
+    "start": "probot run ./index.js",
     "start:dev": "nodemon --exec \"npm start\"",
     "commit": "git-cz",
     "lint": "prettier --write {index,lib/**/*,test/pr-triage.test}.js",
@@ -32,6 +32,7 @@
   "author": "Sam Yamashita",
   "license": "Apache-2.0",
   "dependencies": {
+    "@sentry/node": "^5.14.2",
     "debug": "^4.1.1",
     "dotenv": "^8.0.0",
     "probot": "^9.2.10",
@@ -48,7 +49,6 @@
     "nodemon": "^2.0.1",
     "prettier": "2.0.2",
     "probot-config": "^1.0.0",
-    "raven": "^2.6.3",
     "semantic-release": "^17.0.2",
     "smee-client": "^1.1.0",
     "validate-commit-msg": "^2.14.0"
