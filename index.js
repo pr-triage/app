@@ -4,7 +4,7 @@ const PRTriage = require("./lib/pr-triage");
 
 if (process.env.NODE_ENV === "production") {
   Sentry.init({
-    dsn: "https://dce36edab6334112b02122e07b2bc549@sentry.io/1222067"
+    dsn: "https://dce36edab6334112b02122e07b2bc549@sentry.io/1222067",
   });
 }
 
@@ -17,7 +17,7 @@ function probotPlugin(robot) {
     "pull_request.reopened",
     "pull_request.ready_for_review",
     "pull_request_review.submitted",
-    "pull_request_review.dismissed"
+    "pull_request_review.dismissed",
   ];
 
   robot.on(events, triage);
@@ -28,7 +28,7 @@ async function triage(context) {
   const pullRequest = getPullRequest(context);
 
   try {
-    Sentry.configureScope(scope => {
+    Sentry.configureScope((scope) => {
       scope.setExtra("pull_request_url", pullRequest.url);
     });
     prTriage.triage(pullRequest);
