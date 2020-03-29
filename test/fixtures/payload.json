@@ -224,8 +224,11 @@
         }
       }
     },
-    "none": {
-      "data": {}
+    "not_defined": {
+      "status": 404
+    },
+    "not_allowed": {
+      "status": 403
     }
   }
 }
