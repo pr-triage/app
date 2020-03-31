@@ -19,7 +19,8 @@
 
 ## Motivation
 
-Firstly, I started to create PRTriage to solve my own pain. As an engineer, I spent my time to ask colleagues Pull Requests status such as `WIP (work in progress)`・`DRAFT`・`UNREVIEWED`・`CHANGES_REQUESTED`・`APPROVED`・`MERGED`. Most of the developers use [GitHub](https://github.com) and follow [GitHub Flow](https://guides.github.com/introduction/flow/)/[Git Flow](https://datasift.github.io/gitflow/IntroducingGitFlow.html). Most of them say that the time it takes to know pull request status is getting increasing as the team is large so I published it as Open Source :sparkles:.
+I spent the time to know Pull requests status during team development. As a team bigger, time becomes more increased. 
+At first it was used internally but I noticed most of people have same problem so I published it as Open Source :sparkles:.
 
 
 ## Installation
@@ -44,7 +45,8 @@ Only watching the most recent commit :eyes::
 - Add the `PR: draft` lable when the draft PR is created.
 - Add the `PR: unreviewed` label when the PR does not have any reviews.
 - Add the `PR: reviewed-changes-requested` label when the PR has reviewed and got `Change request` event.
-- Add the `PR: review-approved` label when the PR has reviewed and got `Approve` event.
+- Add the `PR: partially-approved` label when PR has reviewd and got `Approve` from one of the reviewers.
+- Add the `PR: review-approved` label when the PR has reviewed and got `Approve` from everyone.
 - Add the `PR: merged` label when the PR has merged.
 
 
@@ -73,11 +75,13 @@ Example users include the following GitHub organizations:
 
 ### [Code of Conduct](CODE_OF_CONDUCT.md)
 
-It has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+It has adopted a Code of Conduct that we expect project participants to adhere to. <br/>
+Please read [the full text](CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
 
 ### [Contributing Guide](CONTRIBUTING.md)
 
-Read our [contributing guide](CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React.
+Read our [contributing guide](CONTRIBUTING.md) to learn about our development process, how to propose bugfixes<br/> 
+and improvements, and how to build and test your changes to PRTriage.
 
 
 ## License
