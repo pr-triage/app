@@ -224,6 +224,9 @@
         }
       }
     },
+    "required_reviews_not_configured": {
+      "data": {}
+    },
     "not_defined": {
       "status": 404
     },
