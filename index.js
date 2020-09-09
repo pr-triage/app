@@ -31,7 +31,7 @@ async function triage(context) {
   try {
     Sentry.configureScope((scope) => {
       scope.setExtra("context_id", context.id);
-      scope.setExtra("pull_request_url", context.pull_request.url);
+      scope.setExtra("pull_request_url", pullRequest.url);
     });
     prTriage.triage(pullRequest);
   } catch (e) {
