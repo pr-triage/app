@@ -5,7 +5,7 @@
 
 [coverage badge]: https://codecov.io/gh/pr-triage/app/branch/master/graph/badge.svg
 [coverage url]:   https://codecov.io/gh/pr-triage/app
-
+a
 [vulnerabilities badge]: https://snyk.io/test/github/pr-triage/app/badge.svg?targetFile=package.json
 [vulnerabilities url]:   https://snyk.io/test/github/pr-triage/app?targetFile=package.json
 
