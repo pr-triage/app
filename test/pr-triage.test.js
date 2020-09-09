@@ -267,23 +267,50 @@ describe("PRTriage", () => {
     });
 
     describe("when there is a branch protection for the branch", () => {
-      const github = {
-        repos: {
-          getBranchProtection: jest
-            .fn()
-            .mockReturnValue(
-              Promise.resolve(payload["branch_protection"]["required_three"])
-            ),
-        },
-      };
-      const klass = new PRTriage(github, { owner, repo });
-      const subject = () => klass._getRequiredNumberOfReviews();
+      describe("when the Requrie pull request review before mergning is not configured", () => {
+        const github = {
+          repos: {
+            getBranchProtection: jest
+              .fn()
+              .mockReturnValue(
+                Promise.resolve(
+                  payload["branch_protection"][
+                    "required_reviews_not_configured"
+                  ]
+                )
+              ),
+          },
+        };
+        const klass = new PRTriage(github, { owner, repo });
+        const subject = () => klass._getRequiredNumberOfReviews();
 
-      test("should return the `required_approving_review_count`", async () => {
-        klass.pullRequest =
-          payload["pull_request"]["with"]["unreviewed_label"]["data"];
-        const result = await subject();
-        expect(result).toEqual(3);
+        test("should be return a default of 1", async () => {
+          klass.pullRequest =
+            payload["pull_request"]["with"]["unreviewed_label"]["data"];
+          const result = await subject();
+          expect(result).toEqual(1);
+        });
+      });
+
+      describe("when the Requrie pull request review before mergning is configured", () => {
+        const github = {
+          repos: {
+            getBranchProtection: jest
+              .fn()
+              .mockReturnValue(
+                Promise.resolve(payload["branch_protection"]["required_three"])
+              ),
+          },
+        };
+        const klass = new PRTriage(github, { owner, repo });
+        const subject = () => klass._getRequiredNumberOfReviews();
+
+        test("should return the `required_approving_review_count`", async () => {
+          klass.pullRequest =
+            payload["pull_request"]["with"]["unreviewed_label"]["data"];
+          const result = await subject();
+          expect(result).toEqual(3);
+        });
       });
     });
   });

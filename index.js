@@ -29,7 +29,7 @@ async function triage(context) {
 
   try {
     Sentry.configureScope((scope) => {
-      scope.setExtra("pull_request_url", pullRequest.url);
+      scope.setExtra("pull_request", pullRequest);
     });
     prTriage.triage(pullRequest);
   } catch (e) {
@@ -38,7 +38,7 @@ async function triage(context) {
 }
 
 function forRepository(context) {
-  const config = Object.assign({}, context.repo({ logger: debug }));
+  const config = Object.assign({}, context.repo({ logger: context.log }));
   return new PRTriage(context.github, config);
 }
 
