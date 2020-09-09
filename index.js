@@ -24,12 +24,14 @@ function probotPlugin(robot) {
 }
 
 async function triage(context) {
+  context.log.debug(context.id);
   const prTriage = forRepository(context);
   const pullRequest = getPullRequest(context);
 
   try {
     Sentry.configureScope((scope) => {
-      scope.setExtra("pull_request", pullRequest);
+      scope.setExtra("context_id", context.id);
+      scope.setExtra("pull_request_url", context.pull_request.url);
     });
     prTriage.triage(pullRequest);
   } catch (e) {
