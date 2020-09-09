@@ -775,60 +775,40 @@ describe("PRTriage", () => {
     });
   });
 
-  /**
-   * _getFilteredConfigObjByRegex
-   */
-  describe("_getFilteredConfigObjByRegex", () => {
-    describe("when pattern matches", () => {
-      const klass = new PRTriage({}, { owner, repo });
-      const subject = (argument) =>
-        klass._getFilteredConfigObjByRegex(argument);
+  describe("_getConfigObjsForLabels", () => {
+    const klass = new PRTriage({}, { owner, repo });
+    const subject = () => klass._getConfigObjsForLabels();
 
-      test("should be filtered Object", () => {
-        expect(subject(/label*/)).toMatchObject({
-          labelUnreviewed: expect.any(Object),
-          labelApproved: expect.any(Object),
-          labelChangesRequested: expect.any(Object),
-        });
+    test("should be label properties", () => {
+      expect(subject()).toEqual({
+        labelUnreviewed: expect.any(Object),
+        labelApproved: expect.any(Object),
+        labelChangesRequested: expect.any(Object),
+        labelMerged: expect.any(Object),
+        labelDraft: expect.any(Object),
+        labelPartiallyApproved: expect.any(Object),
       });
     });
+  });
 
-    describe("when no pattern matches", () => {
-      const klass = new PRTriage({}, { owner, repo });
-      const subject = (argument) =>
-        klass._getFilteredConfigObjByRegex(argument);
-
-      test("should be empty Object", () => {
-        expect(subject(/fake*/)).toEqual({});
-      });
-    });
-  }); // _getFilteredConfigByRegex
-
-  /**
-   * _getConfigObj
-   */
   describe("_getConfigObj", () => {
-    describe("when key exists", () => {
-      const klass = new PRTriage({}, { owner, repo });
-      const subject = (argument) => klass._getConfigObj(argument);
-      const desiredObj = { color: "fbca04", name: "PR: unreviewed" };
+    const klass = new PRTriage({}, { owner, repo });
+    const subject = (argument) => klass._getConfigObj(argument);
+    const expected = {
+      color: "fbca04",
+      name: "PR: unreviewed",
+    };
 
-      test("should be desiredObj", () => {
-        expect(subject(PRTriage.STATE.UNREVIED)).toEqual(desiredObj);
-      });
-
-      test("should NOT be undefined", () => {
-        expect(subject(PRTriage.STATE.UNREVIED)).not.toBeUndefined();
+    describe("when the key exists", () => {
+      test("should return object", () => {
+        expect(subject(PRTriage.STATE.UNREVIED)).toEqual(expected);
       });
     });
 
-    describe("when key does NOT exist", () => {
-      const klass = new PRTriage({}, { owner, repo });
-      const subject = (argument) => klass._getConfigObj(argument);
-
+    describe("when the key does not exist", () => {
       test("should be undefined", () => {
         expect(subject("fake")).toBeUndefined();
       });
     });
-  }); // _getConfigObj
+  });
 });
