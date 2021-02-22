@@ -42,7 +42,7 @@
     "codecov": "^3.4.0",
     "commitizen": "^4.0.1",
     "cz-conventional-changelog": "^3.0.2",
-    "husky": "^4.0.1",
+    "husky": "^5.1.0",
     "jest": "^26.0.1",
     "jsonwebtoken": "^8.5.1",
     "lint-staged": "^10.0.7",
