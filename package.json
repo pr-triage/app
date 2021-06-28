@@ -47,7 +47,7 @@
     "jsonwebtoken": "^8.5.1",
     "lint-staged": "^10.0.7",
     "nodemon": "^2.0.1",
-    "prettier": "2.1.1",
+    "prettier": "2.3.2",
     "probot-config": "^1.0.0",
     "semantic-release": "^17.0.2",
     "smee-client": "^1.1.0",
