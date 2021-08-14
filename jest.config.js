@@ -1,6 +1,6 @@
 module.exports = {
     "verbose": true,
-    "testURL": "http://localhost/",
+    "testURL": "http://localhost/", 
     "collectCoverageFrom": [
         "lib/**/*.js"
     ],
