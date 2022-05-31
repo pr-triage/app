@@ -16,13 +16,13 @@
 
 # [PRTriage][prtriage] &middot; [![dep status Status][dep badge]][dep url] [![vulnerabilities status][vulnerabilities badge]][vulnerabilities url] [![licence management status][license management badge]][license management url]
 
-> GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
+> GitHub App built with [Probot](https://github.com/probot/probot) that adds an appropriate label depending on the Pull Request's status.
 
 
 ## Motivation
 
-I spent the time to know Pull requests status during team development. As a team bigger, time becomes more increased. 
-At first it was used internally but I noticed most of people have same problem so I published it as Open Source :sparkles:.
+I spent so much time checking the status of pull requests during team development. As a team becomes bigger, the more time this takes. 
+At first, this action was used internally but I noticed many people have the same problem so I published it as Open Source :sparkles:.
 
 
 ## Installation
@@ -44,12 +44,12 @@ Only watching the most recent commit :eyes::
 </p>
 
 - Do nothing when the PR's title starts from `WIP`, `[WIP]` or `WIP:`.
-- Add the `PR: draft` lable when the draft PR is created.
+- Add the `PR: draft` label when a draft PR is created.
 - Add the `PR: unreviewed` label when the PR does not have any reviews.
-- Add the `PR: reviewed-changes-requested` label when the PR has reviewed and got `Change request` event.
-- Add the `PR: partially-approved` label when PR has reviewd and got `Approve` from one of the reviewers.
-- Add the `PR: review-approved` label when the PR has reviewed and got `Approve` from everyone.
-- Add the `PR: merged` label when the PR has merged.
+- Add the `PR: reviewed-changes-requested` label when the PR has been reviewed but has `Changes requested`.
+- Add the `PR: partially-approved` label when PR has been reviewed and `Approved` from some but not all of the reviewers.
+- Add the `PR: review-approved` label when the PR has been reviewed and `Approved` by everyone.
+- Add the `PR: merged` label when the PR has been merged.
 
 
 ## Trusted by
@@ -82,7 +82,7 @@ Please read [the full text](CODE_OF_CONDUCT.md) so that you can understand what 
 
 ### [Contributing Guide](CONTRIBUTING.md)
 
-Read our [contributing guide](CONTRIBUTING.md) to learn about our development process, how to propose bugfixes<br/> 
+Read our [contributing guide](CONTRIBUTING.md) to learn about our development process, and how to propose bugfixes<br/> 
 and improvements, and how to build and test your changes to PRTriage.
 
 
