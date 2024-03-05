@@ -3,7 +3,7 @@ version: v1.13.5
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
-  SNYK-JS-LODASH-450202:
+  SNYK-JS-LODASH-450202: 
     - probot > hbs > handlebars > async > lodash:
         patched: '2019-07-04T03:10:53.834Z'
   SNYK-JS-HTTPSPROXYAGENT-469131:

@@ -1,6 +1,6 @@
 # Looking for contributors!!
 
-[prtriage]: https://github.com/apps/pr-triage
+[prtriage]: https://github.com/apps/pr-triage 
 
 [dep badge]:   https://api.dependabot.com/badges/status?host=github&repo=pr-triage/app
 [dep url]:     https://dependabot.com
@@ -19,7 +19,7 @@
 > GitHub App built with [Probot](https://github.com/probot/probot) that add an appropriate label depend on the PR's status.
 
 
-## Motivation
+## Motivation 
 
 I spent the time to know Pull requests status during team development. As a team bigger, time becomes more increased. 
 At first it was used internally but I noticed most of people have same problem so I published it as Open Source :sparkles:.
